@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ============== META TAGS ============== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre el menú digital de TERRA BRASIL. Sabores auténticos, promociones especiales y servicio de delivery.">
+    <meta name="keywords" content="TERRA BRASIL, restaurante, menú digital, comida brasileña, delivery">
+    <meta name="author" content="Restaurante TERRA BRASIL">
+
+    <!-- ============== TÍTULO DE LA PÁGINA ============== -->
+    <title>Menú Digital - Restaurante TERRA BRASIL</title>
+
+    <!-- ============== FAVICON ============== -->
+    <!-- Consejo: Crea un favicon de 32x32 y colócalo en /assets/images/ -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- ============== BOOTSTRAP 5 CSS ============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- ============== GOOGLE FONTS (OPCIONAL, PARA UN MEJOR ESTILO) ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- ============== HOJA DE ESTILOS PERSONALIZADA ============== -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="menu-buffet">
+    <a href="index.html" class="fixed-home-btn" aria-label="Volver a la página principal">
+        <!-- Usamos el mismo icono de flecha, pero podrías cambiarlo por un icono de "casa" si prefieres -->
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+    </a>
+
+<!-- =================================================================
+            HEADER - CONTIENE EL BANNER SUPERIOR Y EL LOGO
+================================================================== -->
+    
+        <header class="header-section position-relative"> <!-- 1. Añadimos position-relative al contenedor principal -->
+        
+            <!-- BANNER PRINCIPAL -->
+            <div class="main-banner"></div>
+        
+            <!-- Espacio rojo superior -->
+            <div class="banner-space"></div>
+        
+            <!-- Contenedor del logo (Ahora posicionado absolutamente) -->
+            <!-- 2. Se posiciona absolutamente relativo al header-section -->
+            <div class="logo-wrapper"> 
+                <div class="logo-container">
+                    <img src="assets/images/logo_lp.png" alt="Logo de TERRA BRASIL" class="logo">
+                </div>
+            </div>
+        </header>
+    <!-- =================================================================
+    MAIN - CONTENIDO PRINCIPAL DE LA PÁGINA
+    ================================================================== -->
+    <main>
+
+        <!-- =================================================================
+        SECCIÓN DE TÍTULO Y DESCRIPCIÓN
+        Fondo: #F2F2F2
+        ================================================================== -->
+        <section class="title-section text-center">
+            <div class="container">
+                <h1 class="main-title display-4 fw-bolder text-dark">Terra Brásil</h1>
+                <p class="main-tagline lead text-muted">Descubre un mundo de sabores auténticos.</p>
+            </div>
+        </section>
+        
+
+    <!-- =================================================================
+        SECCIÓN DE BOTONES / ALERTAS
+    ================================================================== -->
+        <section class="info-buttons-section container my-4">
+            <div class="row g-3 justify-content-center">
+            
+                <!-- ===== Botón de Servicio de Delivery ===== -->
+                <div class="col-6">
+                    <a href="#" class="info-card text-decoration-none d-flex flex-column justify-content-center align-items-center">
+                        <p class="delivery-subtitle-final m-0">SERVICIO DE</p>
+                        <p class="delivery-maintext-final m-0">DELIVERY</p>
+                    </a>
+                </div>
+            
+                <!-- ===== Botón de Promoción de Viernes ===== -->
+                <div class="col-6">
+                    <!-- 
+                        - Usamos d-flex y align-items-center para alinear verticalmente las dos columnas.
+                        - justify-content-center centra todo el contenido horizontalmente.
+                    -->
+                    <a href="#" class="info-card text-decoration-none d-flex align-items-center justify-content-center">
+                        <!-- Columna Izquierda (Viernes, Descuento) -->
+                        <div class="me-3"> <!-- me-3 añade un margen a la derecha (margin-end) -->
+                            <p class="discount-day-final m-0">VIERNES</p>
+                            <p class="discount-subtitle-final m-0">DESCUENTO</p>
+                        </div>
+                        <!-- Columna Derecha (20%, En Carnes) -->
+                        <div class="text-center">
+                            <p class="discount-percentage-final m-0">20%</p>
+                            <p class="discount-product-final m-0">EN CARNES</p>
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- =================================================================
+        SECCIÓN DEL SLIDER DE IMÁGENES
+        Las imágenes ahora se controlan desde el archivo CSS.
+        ================================================================== -->
+        <section class="slider-section container my-4">
+            <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores del Slider (los puntos inferiores) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <!-- Contenido de las diapositivas -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <!-- NOTA: Ahora es un div vacío con una clase específica. YA NO HAY ETIQUETA <img> ADENTRO. -->
+                    <div class="carousel-item active slider-bg-1"></div>
+                
+                    <!-- Slide 2 -->
+                    <div class="carousel-item slider-bg-2"></div>
+                
+                    <!-- Slide 3 -->
+                    <div class="carousel-item slider-bg-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+            INICIO DEL SISTEMA DE MENÚ UNIFICADO (ESTRUCTURA CORREGIDA Y FINAL)
+        ================================================================== -->
+        <div class="container my-4">
+        
+            <!-- 
+                PARTE 1: CONTENEDOR DE TODOS LOS ACTIVADORES (TRIGGERS)
+                Este elemento tiene el 'role="tablist"' y contiene ÚNICAMENTE
+                los botones de los días y las cards de categoría.
+            -->
+            <section class="menu-triggers" id="menu-completo-tabs" role="tablist">
+                <!-- Barra deslizable de días -->
+                <div class="menu-dias-wrapper mb-5">
+                    <h2 class="text-center mb-4">Menú</h2>
+                    <div class="nav-wrapper-scrollable">
+                        <ul class="nav nav-tabs flex-nowrap">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="lunes-tab" data-bs-toggle="tab" data-bs-target="#lunes-pane" type="button" role="tab">
+                                    Lunes
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="martes-tab" data-bs-toggle="tab" data-bs-target="#martes-pane" type="button" role="tab">
+                                    Martes
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="miercoles-tab" data-bs-toggle="tab" data-bs-target="#miercoles-pane" type="button" role="tab">
+                                    Miércoles
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="jueves-tab" data-bs-toggle="tab" data-bs-target="#jueves-pane" type="button" role="tab">
+                                    Jueves
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="viernes-tab" data-bs-toggle="tab" data-bs-target="#viernes-pane" type="button" role="tab">
+                                    Viernes
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sabado-tab" data-bs-toggle="tab" data-bs-target="#sabado-pane" type="button" role="tab">
+                                    Sábado
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="domingo-tab" data-bs-toggle="tab" data-bs-target="#domingo-pane" type="button" role="tab">
+                                    Domingo
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- =================================================================
+                    2. NAVEGACIÓN PARTE B: CARDS PARA CATEGORÍAS FIJAS (ESTRUCTURA CORREGIDA)
+                ================================================================== -->
+                <div class="menu-fijo-wrapper mt-5">
+
+                    <ul class="nav nav-cards row g-3" role="presentation">
+                        <li class="nav-item col-6" role="presentation">
+                            <!-- El enlace <a> ahora tiene la clase '.nav-link' que Bootstrap necesita -->
+                            <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
+                                <img src="assets/images/bebidas.webp" alt="Categoría de Bebidas" class="menu-item-img" loading="lazy">
+                                <div class="menu-item-label">
+                                    <h3 class="menu-item-title">
+                                        Bebidas
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6" role="presentation">
+                            <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="postres-tab" data-bs-toggle="tab" data-bs-target="#postres-pane" role="tab">
+                                <img src="assets/images/postres.webp" alt="Categoría de Postres" class="menu-item-img" loading="lazy">
+                                <div class="menu-item-label">
+                                    <h3 class="menu-item-title">
+                                        Postres
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="tab-content mt-4" id="menuTabContent">
+                <!-- Panel para LUNES -->
+                <div class="tab-pane fade" id="lunes-pane" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <!-- INICIO Panel para LUNES PRINCIPALES -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                PRINCIPALES:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Bife de Vaca
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Milanesa de Pollo
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+                                                
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para LUNES PRINCIPALES -->
+                        
+                        <!-- INICIO Panel para LUNES ACOMPAÑAMIENTOS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ACOMPAÑAMIENTOS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Arroz Chino
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Puré de Papa
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+                                                
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para LUNES ACOMPAÑAMIENTOS -->
+                        
+                        <!-- INICIO Panel para LUNES ENSALADAS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ENSALADAS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Ensalada Cesar
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Ensalada de Papa
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+                                                
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para LUNES ENSALADAS -->
+                        
+                    </div>
+                </div>
+            
+                <!-- Paneles de otros días -->
+                <div class="tab-pane fade" id="martes-pane" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <!-- INICIO Panel para MARTES PRINCIPALES -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                PRINCIPALES:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Marinera de Carne
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Asado a la olla 
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MARTES PRINCIPALES -->
+
+                        <!-- INICIO Panel para MARTES ACOMPAÑAMIENTOS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ACOMPAÑAMIENTOS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Espagueti con Manteca
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Arroz Blanco
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MARTES ACOMPAÑAMIENTOS -->
+
+                        <!-- INICIO Panel para MARTES ENSALADAS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ENSALADAS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Ensalada de Poroto
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Ensalada Italiana
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MARTES ENSALADAS -->
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="miercoles-pane" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <!-- INICIO Panel para MIERCOLES PRINCIPALES -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                PRINCIPALES:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Pollo al Horno
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Hígado Encebollado 
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MIERCOLES PRINCIPALES -->
+
+                        <!-- INICIO Panel para MIERCOLES ACOMPAÑAMIENTOS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ACOMPAÑAMIENTOS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Ravioles
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Arroz Blanco
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MIERCOLES ACOMPAÑAMIENTOS -->
+
+                        <!-- INICIO Panel para MIERCOLES ENSALADAS -->
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                ENSALADAS:
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">
+                                                <span class="product-title-bs5">•</span> Ensalada de Atún
+                                                <br>
+                                                <span class="product-title-bs5">•</span> Ensalada Mixta
+                                            </p>
+                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $35.000
+                                            </p> -->
+                                            <!-- <small class="product-note-bs5 text-muted">
+
+                                            </small> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN Panel para MIERCOLES ENSALADAS -->
+                    </div>
+                </div>
+                
+                
+                <div class="tab-pane fade" id="jueves-pane" role="tabpanel" tabindex="0">
+                </div>
+                <div class="tab-pane fade" id="viernes-pane" role="tabpanel" tabindex="0">
+                </div>
+                <div class="tab-pane fade" id="sabado-pane" role="tabpanel" tabindex="0">
+                </div>
+                <div class="tab-pane fade" id="domingo-pane" role="tabpanel" tabindex="0">
+                </div>
+                <!-- Panel para BEBIDAS -->
+                <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" tabindex="0">
+                    <!-- Producto 1: refresco -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden p-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-2">
+                                        <h3 class="product-title-bs5 h5 mb-1">Coca Cola</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
+                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/bebidas-producto1.webp" alt="#" class="img-fluid rounded-3">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- FIN Producto 1: refresco -->
+
+                    <!-- Producto 2: refresco -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden p-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-2">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sprite</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
+                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/bebidas-producto2.webp" alt="#" class="img-fluid rounded-3">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- FIN Producto 2: refresco -->
+
+                    <!-- Producto 1: Cóctel -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden p-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-2">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sexo en la playa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, licor de durazno (peach schnapps), jugo de naranja, jugo de arándano (cranberry).</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
+                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/bebidas-producto3.webp" alt="#" class="img-fluid rounded-3">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- FIN Producto 1: Cóctel -->
+
+                    <!-- Producto 2: Cóctel -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden p-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-2">
+                                        <h3 class="product-title-bs5 h5 mb-1">Moscow Mule</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, ginger beer (cerveza de jengibre), jugo de lima fresca, hielo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
+                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/bebidas-producto4.webp" alt="#" class="img-fluid rounded-3">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- FIN Producto 2: Cóctel -->
+                </div>
+                <!-- Panel para POSTRES -->
+                <div class="tab-pane fade" id="postres-pane" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                Brigadeiro (Brasil)
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">Dulce de leche condensado con cacao y granas de chocolate</p>
+                                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $20.000
+                                            </p>
+                                            <small class="product-note-bs5 text-muted">
+                                                Porción personal
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <img src="assets/images/postres-producto1.webp" alt="Torta de Chocolate" class="img-fluid rounded-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card card-product-bs5 overflow-hidden p-2">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-7">
+                                        <div class="card-body p-2">
+                                            <h3 class="product-title-bs5 h5 mb-1">
+                                                Torta Húmeda de Chocolate
+                                            </h3>
+                                            <p class="product-description-bs5 small text-muted mb-2">Nuestra clásica torta de chocolate con abundante fudge.</p>
+                                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                                $20.000
+                                            </p>
+                                            <small class="product-note-bs5 text-muted">
+                                                Porción personal
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <img src="assets/images/postres-producto2.webp" alt="Torta de Chocolate" class="img-fluid rounded-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =================================================================
+            FIN DEL SISTEMA DE MENÚ UNIFICADO
+        ================================================================== -->
+
+    </main>
+
+    <!-- =================================================================
+    FOOTER - PIE DE PÁGINA
+    ================================================================== -->
+    <footer class="footer-section text-center">
+        <div class="container">
+            <small class="d-block copyright-text">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
+                
+            <small class="d-block credit-text">
+                Menú digital desarrollado por 
+                <a href="#" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
+            </small>
+        </div>
+    </footer>
+
+
+    <!-- ============== BOOTSTRAP 5 JS ============== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- ============== SCRIPT PERSONALIZADO (SI ES NECESARIO) ============== -->
+    <script src="js/script.js" defer></script>
+
+
+</body>
+
+</html>
