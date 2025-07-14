@@ -705,32 +705,11 @@ html {
 }
 
 /* =================================================================
-    16. CENTRADO DEL MENÚ DE DÍAS EN ESCRITORIO
+    16. LAYOUT MULTI-CARD PARA PRODUCTOS & MENU CENTRADO (ESCRITORIO)
    ================================================================= */
 
-/* Aplicamos estos estilos solo en pantallas de 768px o más (tabletas y escritorios) */
+/* Estas reglas se aplican solo a pantallas de 768px o más (laptops, escritorios) */
 @media (min-width: 768px) {
-    /* 
-        Convertimos el contenedor deslizable en un contenedor flex.
-        Esto nos da acceso a las poderosas propiedades de alineación.
-    */
-    .nav-wrapper-scrollable {
-        display: flex;
-        
-        /* 
-            Esta es la propiedad clave: centra horizontalmente
-            el contenido del contenedor flex (en este caso, la lista <ul> con los días).
-        */
-        justify-content: center;
-    }
-}
-
-/* =================================================================
-    17. LAYOUT MULTI-CARD PARA PRODUCTOS EN ESCRITORIO
-   ================================================================= */
-
-/* Estas reglas se aplican solo a pantallas de 992px o más (laptops, escritorios) */
-@media (min-height: 992px) {
     
     /* 1. Seleccionamos el contenedor de las tarjetas de producto.
     - 'flex-wrap: wrap' es la clave para permitir que varias tarjetas quepan en una línea.
@@ -753,5 +732,19 @@ html {
         
         /* Ponemos un máximo por seguridad. */
         max-width: 350px;
+    }
+
+    /* 
+        Convertimos el contenedor deslizable en un contenedor flex.
+        Esto nos da acceso a las poderosas propiedades de alineación.
+    */
+    .nav-wrapper-scrollable {
+        display: flex;
+        
+        /* 
+            Esta es la propiedad clave: centra horizontalmente
+            el contenido del contenedor flex (en este caso, la lista <ul> con los días).
+        */
+        justify-content: center;
     }
 }
