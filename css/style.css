@@ -87,25 +87,29 @@ body {
 }
 
 /* =================================================================
-    4. BOTONES DE INFORMACIÓN (VERSIÓN FINAL, DISEÑO IMAGEN)
+    4. BOTONES DE INFORMACIÓN (VERSIÓN FINAL Y RESPONSIVE)
    ================================================================= */
 
-
+/* Estilo base para ambas tarjetas */
 .info-card {
     background-color: var(--color-button-background);
     border-radius: 20px;
     width: 100%;
-    height: 70px;
-    display: flex; /* Aseguramos que sea flex para que las utilidades de Bootstrap funcionen */
+    padding: 0.5rem;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    min-height: 80px; /* Una altura mínima para que no se colapsen */
 }
 
 /* --- ESTILOS PARA EL BOTÓN DE DELIVERY --- */
 .delivery-subtitle-final {
-    font-weight: 700; /* Fuente más delgada */
+    font-weight: 700;
     font-size: 0.9rem;
     color: #555;
     letter-spacing: 2px;
-    margin-bottom: 0.25rem !important; /* Forzamos un pequeño espacio debajo */
+    margin-bottom: 0 !important;
+    text-align: center;
 }
 .delivery-maintext-final {
     display: inline-block;
@@ -113,61 +117,80 @@ body {
     color: white;
     font-weight: 900;
     font-size: 1.5rem;
-    padding: 0.3rem 1.8rem;
+    padding: 0.1rem 1.5rem; /* Padding horizontal ajustado */
     border-radius: 50px;
     line-height: 1.2;
 }
 
 /* --- ESTILOS PARA EL BOTÓN DE DESCUENTO --- */
+/* Contenedor principal del botón de descuento */
+.info-card > a {
+    gap: 0.5rem; /* Espacio entre el texto de la izquierda y el de la derecha */
+}
+
 .discount-day-final {
     font-weight: 900;
     font-size: 1.1rem;
     color: var(--color-text-dark);
     line-height: 1;
+    text-align: right;
 }
 .discount-subtitle-final {
-    font-weight: 700; /* Fuente más delgada */
+    font-weight: 700;
     font-size: 0.7rem;
     color: #555;
     letter-spacing: 1px;
     line-height: 1;
+    text-align: right;
 }
 .discount-percentage-final {
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3.2rem; /* Tamaño base ligeramente reducido */
     color: var(--color-text-orange);
     line-height: 1;
 }
 .discount-product-final {
-    font-weight: 700; /* Fuente más delgada */
+    font-weight: 700;
     font-size: 0.7rem;
     color: #555;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-/* 
-    Media Queries para móviles.
-    Simplemente ajustamos los tamaños de fuente. Bootstrap se encarga del resto.
-*/
-@media (max-width: 768px) {
-    .delivery-subtitle-final { font-size: 0.8rem; }
-    .delivery-maintext-final { font-size: 1.3rem; }
-    .discount-day-final { font-size: 1rem; }
-    .discount-subtitle-final { font-size: 0.6rem; }
-    .discount-percentage-final { font-size: 3rem; }
-    .discount-product-final { font-size: 0.6rem; }
-}
+/* =================================================================
+    ÚNICO MEDIA QUERY PARA AJUSTES EN MÓVILES
+   ================================================================= */
 
-@media (max-width: 400px) {
+/* Para pantallas de 450px de ancho o menos */
+@media (max-width: 450px) {
+    /* Reducimos el padding y la altura mínima de las tarjetas */
     .info-card {
-        aspect-ratio: 1.5 / 1; /* Hacemos las tarjetas un poco más altas en pantallas muy pequeñas */
+        padding: 0.4rem;
+        min-height: 70px;
     }
-    .delivery-subtitle-final { font-size: 0.6rem; }
-    .delivery-maintext-final { font-size: 1rem; }
-    .discount-day-final { font-size: 0.8rem; }
-    .discount-subtitle-final { font-size: 0.5rem; }
-    .discount-percentage-final { font-size: 2.2rem; }
-    .discount-product-final { font-size: 0.5rem; }
+
+    /* Reducimos los textos del botón de DELIVERY */
+    .delivery-subtitle-final {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+    .delivery-maintext-final {
+        font-size: 1rem;
+        padding: 0.1rem 1rem;
+    }
+
+    /* Reducimos los textos del botón de DESCUENTO */
+    .discount-day-final {
+        font-size: 0.8rem;
+    }
+    .discount-subtitle-final {
+        font-size: 0.5rem;
+    }
+    .discount-percentage-final {
+        font-size: 2.2rem; /* Reducción significativa para que no se desborde */
+    }
+    .discount-product-final {
+        font-size: 0.5rem;
+    }
 }
 
 /* =================================================================
