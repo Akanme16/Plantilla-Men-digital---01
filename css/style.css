@@ -732,7 +732,7 @@ html {
    ================================================================= */
 
 /* Estas reglas se aplican solo a pantallas de 768px o más (laptops, escritorios) */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
     
     /* 1. Seleccionamos el contenedor de las tarjetas de producto.
     - 'flex-wrap: wrap' es la clave para permitir que varias tarjetas quepan en una línea.
