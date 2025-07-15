@@ -161,7 +161,7 @@ body {
    ================================================================= */
 
 /* Para pantallas de 450px de ancho o menos */
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     /* Reducimos el padding y la altura mínima de las tarjetas */
     .info-card {
         padding: 0.4rem;
