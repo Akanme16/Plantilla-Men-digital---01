@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // ===== INICIO DE LA MODIFICACIÓN =====
+    // Seleccionamos el contenedor del menú deslizable
+    const scrollableMenu = document.querySelector('.nav-wrapper-scrollable');
+    // Si existe, forzamos su posición de scroll al inicio (izquierda)
+    if (scrollableMenu) {
+        scrollableMenu.scrollLeft = 0;
+    }
+    // ===== FIN DE LA MODIFICACIÓN =====
+
     const allTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
     const allPanes = document.querySelectorAll('.tab-pane');
     const tabContent = document.querySelector('#menuTabContent'); // Contenedor de productos

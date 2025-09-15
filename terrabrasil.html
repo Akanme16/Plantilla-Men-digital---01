@@ -13,7 +13,6 @@
     <title>Menú Digital - Restaurante TERRA BRASIL</title>
 
     <!-- ============== FAVICON ============== -->
-    <!-- Consejo: Crea un favicon de 32x32 y colócalo en /assets/images/ -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!-- ============== BOOTSTRAP 5 CSS ============== -->
@@ -30,39 +29,28 @@
 
 <body class="menu-buffet">
     <a href="index.html" class="fixed-home-btn" aria-label="Volver a la página principal">
-        <!-- Usamos el mismo icono de flecha, pero podrías cambiarlo por un icono de "casa" si prefieres -->
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
     </a>
 
 <!-- =================================================================
-            HEADER - CONTIENE EL BANNER SUPERIOR Y EL LOGO
+            HEADER
 ================================================================== -->
     
-        <header class="header-section position-relative"> <!-- 1. Añadimos position-relative al contenedor principal -->
-        
-            <!-- BANNER PRINCIPAL -->
-            <div class="main-banner"></div>
-        
-            <!-- Espacio rojo superior -->
-            <div class="banner-space"></div>
-        
-            <!-- Contenedor del logo (Ahora posicionado absolutamente) -->
-            <!-- 2. Se posiciona absolutamente relativo al header-section -->
-            <div class="logo-wrapper"> 
-                <div class="logo-container">
-                    <img src="assets/images/logo_lp.png" alt="Logo de TERRA BRASIL" class="logo">
-                </div>
+    <header class="header-section position-relative">
+        <div class="main-banner"></div>
+        <div class="banner-space"></div>
+        <div class="logo-wrapper"> 
+            <div class="logo-container">
+                <img src="assets/images/logo_lp.png" alt="Logo de TERRA BRASIL" class="logo">
             </div>
-        </header>
-    <!-- =================================================================
-    MAIN - CONTENIDO PRINCIPAL DE LA PÁGINA
-    ================================================================== -->
-    <main>
+        </div>
+    </header>
 
-        <!-- =================================================================
-        SECCIÓN DE TÍTULO Y DESCRIPCIÓN
-        Fondo: #F2F2F2
-        ================================================================== -->
+<!-- =================================================================
+    MAIN
+================================================================== -->
+    <main>
+        <!-- Sección de Título -->
         <section class="title-section text-center">
             <div class="container">
                 <h1 class="main-title display-4 fw-bolder text-dark">Terra Brásil</h1>
@@ -70,606 +58,1484 @@
             </div>
         </section>
         
-
-    <!-- =================================================================
-        SECCIÓN DE BOTONES / ALERTAS
-    ================================================================== -->
-        <section class="info-buttons-section container my-4">
-            <div class="row g-3 justify-content-center">
-            
-                <!-- ===== Botón de Servicio de Delivery ===== -->
-                <div class="col-6">
-                    <a href="#" class="info-card text-decoration-none d-flex flex-column justify-content-center align-items-center">
-                        <p class="delivery-subtitle-final m-0">SERVICIO DE</p>
-                        <p class="delivery-maintext-final m-0">DELIVERY</p>
-                    </a>
-                </div>
-            
-                <!-- ===== Botón de Promoción de Viernes ===== -->
-                <div class="col-6">
-                    <!-- 
-                        - Usamos d-flex y align-items-center para alinear verticalmente las dos columnas.
-                        - justify-content-center centra todo el contenido horizontalmente.
-                    -->
-                    <a href="#" class="info-card text-decoration-none d-flex align-items-center justify-content-center">
-                        <!-- Columna Izquierda (Viernes, Descuento) -->
-                        <div class="me-3"> <!-- me-3 añade un margen a la derecha (margin-end) -->
-                            <p class="discount-day-final m-0">VIERNES</p>
-                            <p class="discount-subtitle-final m-0">DESCUENTO</p>
-                        </div>
-                        <!-- Columna Derecha (20%, En Carnes) -->
-                        <div class="text-center">
-                            <p class="discount-percentage-final m-0">20%</p>
-                            <p class="discount-product-final m-0">EN CARNES</p>
-                        </div>
-                    </a>
-                </div>
-            
-            </div>
-        </section>
-
-        <!-- =================================================================
-        SECCIÓN DEL SLIDER DE IMÁGENES
-        Las imágenes ahora se controlan desde el archivo CSS.
-        ================================================================== -->
+        <!-- Slider de Imágenes -->
         <section class="slider-section container my-4">
             <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicadores del Slider (los puntos inferiores) -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            
-                <!-- Contenido de las diapositivas -->
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <!-- NOTA: Ahora es un div vacío con una clase específica. YA NO HAY ETIQUETA <img> ADENTRO. -->
                     <div class="carousel-item active slider-bg-1"></div>
-                
-                    <!-- Slide 2 -->
                     <div class="carousel-item slider-bg-2"></div>
-                
-                    <!-- Slide 3 -->
                     <div class="carousel-item slider-bg-3"></div>
                 </div>
             </div>
         </section>
-
+                
         <!-- =================================================================
-            INICIO DEL SISTEMA DE MENÚ UNIFICADO (ESTRUCTURA CORREGIDA Y FINAL)
+        SECCIÓN DE INFORMACIÓN DEL TENEDOR LIBRE
         ================================================================== -->
-        <div class="container my-4">
-        
-            <!-- 
-                PARTE 1: CONTENEDOR DE TODOS LOS ACTIVADORES (TRIGGERS)
-                Este elemento tiene el 'role="tablist"' y contiene ÚNICAMENTE
-                los botones de los días y las cards de categoría.
-            -->
-            <section class="menu-triggers" id="menu-completo-tabs" role="tablist">
-                <!-- Barra deslizable de días -->
-                <div class="menu-dias-wrapper mb-5">
-                    <h2 class="text-center mb-4">Menú</h2>
-                    <div class="nav-wrapper-scrollable">
-                        <ul class="nav nav-tabs flex-nowrap">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="lunes-tab" data-bs-toggle="tab" data-bs-target="#lunes-pane" type="button" role="tab">
-                                    Lunes
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="martes-tab" data-bs-toggle="tab" data-bs-target="#martes-pane" type="button" role="tab">
-                                    Martes
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="miercoles-tab" data-bs-toggle="tab" data-bs-target="#miercoles-pane" type="button" role="tab">
-                                    Miércoles
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="jueves-tab" data-bs-toggle="tab" data-bs-target="#jueves-pane" type="button" role="tab">
-                                    Jueves
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="viernes-tab" data-bs-toggle="tab" data-bs-target="#viernes-pane" type="button" role="tab">
-                                    Viernes
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="sabado-tab" data-bs-toggle="tab" data-bs-target="#sabado-pane" type="button" role="tab">
-                                    Sábado
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="domingo-tab" data-bs-toggle="tab" data-bs-target="#domingo-pane" type="button" role="tab">
-                                    Domingo
-                                </button>
-                            </li>
-                        </ul>
+        <section class="buffet-info-section container">
+            <div class="buffet-info-card">
+                <h2 class="buffet-title">Tenedor Libre</h2>
+            
+                <!-- Precio Lunes a Viernes -->
+                <div class="buffet-price-row">
+                    <div class="buffet-day-time">
+                        <p class="buffet-day">Lunes a Viernes</p>
+                        <p class="buffet-time">11:30 a 15:00 hs</p>
+                    </div>
+                    <div class="buffet-price">
+                        <p>₲85.000</p>
                     </div>
                 </div>
             
-                <!-- =================================================================
-                    2. NAVEGACIÓN PARTE B: CARDS PARA CATEGORÍAS FIJAS (ESTRUCTURA CORREGIDA)
-                ================================================================== -->
-                <div class="menu-fijo-wrapper mt-5">
-
-                    <ul class="nav nav-cards row g-3" role="presentation">
-                        <li class="nav-item col-6" role="presentation">
-                            <!-- El enlace <a> ahora tiene la clase '.nav-link' que Bootstrap necesita -->
-                            <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
-                                <img src="assets/images/bebidas.webp" alt="Categoría de Bebidas" class="menu-item-img" loading="lazy">
-                                <div class="menu-item-label">
-                                    <h3 class="menu-item-title">
-                                        Bebidas
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6" role="presentation">
-                            <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="postres-tab" data-bs-toggle="tab" data-bs-target="#postres-pane" role="tab">
-                                <img src="assets/images/postres.webp" alt="Categoría de Postres" class="menu-item-img" loading="lazy">
-                                <div class="menu-item-label">
-                                    <h3 class="menu-item-title">
-                                        Postres
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <div class="tab-content mt-4" id="menuTabContent">
-                <!-- Panel para LUNES -->
-                <div class="tab-pane fade" id="lunes-pane" role="tabpanel" tabindex="0">
-                    <div class="row g-4">
-                        <!-- INICIO Panel para LUNES PRINCIPALES -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                PRINCIPALES:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Bife de Vaca
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Milanesa de Pollo
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-                                                
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para LUNES PRINCIPALES -->
-                        
-                        <!-- INICIO Panel para LUNES ACOMPAÑAMIENTOS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ACOMPAÑAMIENTOS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Arroz Chino
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Puré de Papa
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-                                                
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para LUNES ACOMPAÑAMIENTOS -->
-                        
-                        <!-- INICIO Panel para LUNES ENSALADAS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ENSALADAS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Ensalada Cesar
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Ensalada de Papa
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-                                                
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para LUNES ENSALADAS -->
-                        
+                <!-- Precio Sábado y Domingo -->
+                <div class="buffet-price-row">
+                    <div class="buffet-day-time">
+                        <p class="buffet-day">Sábado y Domingo</p>
+                        <p class="buffet-time">11:30 a 15:00 hs</p>
+                    </div>
+                    <div class="buffet-price">
+                        <p>₲95.000</p>
                     </div>
                 </div>
             
-                <!-- Paneles de otros días -->
-                <div class="tab-pane fade" id="martes-pane" role="tabpanel" tabindex="0">
-                    <div class="row g-4">
-                        <!-- INICIO Panel para MARTES PRINCIPALES -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                PRINCIPALES:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Marinera de Carne
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Asado a la olla 
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para MARTES PRINCIPALES -->
-
-                        <!-- INICIO Panel para MARTES ACOMPAÑAMIENTOS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ACOMPAÑAMIENTOS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Espagueti con Manteca
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Arroz Blanco
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para MARTES ACOMPAÑAMIENTOS -->
-
-                        <!-- INICIO Panel para MARTES ENSALADAS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ENSALADAS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Ensalada de Poroto
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Ensalada Italiana
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para MARTES ENSALADAS -->
-                    </div>
+                <!-- Divisor -->
+                <hr class="buffet-divider">
+            
+                <!-- Opción por Kilo -->
+                <div class="buffet-kilo-option">
+                    <p>OPCIÓN POR KILO: <strong>₲8.900</strong> CADA 100 GRAMOS</p>
                 </div>
+            </div>
+        </section>
+        <!-- =================================================================
+            FIN DE LA SECCIÓN
+        ================================================================== -->
 
+        <!<!-- =================================================================
+            INICIO DEL SISTEMA DE MENÚ
+        ================================================================== -->
+<div class="container my-4">
 
-                <div class="tab-pane fade" id="miercoles-pane" role="tabpanel" tabindex="0">
-                    <div class="row g-4">
-                        <!-- INICIO Panel para MIERCOLES PRINCIPALES -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                PRINCIPALES:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Pollo al Horno
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Hígado Encebollado 
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
+    <!-- 1. NAVEGACIÓN DEL MENÚ (TABS) -->
+    <section class="menu-triggers" id="menu-completo-tabs" role="tablist">
+        <!-- Barra deslizable de categorías -->
+        <div class="menu-dias-wrapper mb-5">
+            <h2 class="text-center mb-4">Menú</h2>
+            <div class="nav-wrapper-scrollable">
+                <ul class="nav nav-tabs flex-nowrap">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="principales-tab" data-bs-toggle="tab" data-bs-target="#principales-pane" type="button" role="tab">
+                            Principales
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="guarniciones-tab" data-bs-toggle="tab" data-bs-target="#guarniciones-pane" type="button" role="tab">
+                            Guarniciones
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="parrillas-tab" data-bs-toggle="tab" data-bs-target="#parrillas-pane" type="button" role="tab">
+                            Parrillas
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ensaladas-tab" data-bs-toggle="tab" data-bs-target="#ensaladas-pane" type="button" role="tab">
+                            Ensaladas
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Cards para categorías fijas -->
+        <div class="menu-fijo-wrapper mt-5">
+            <!-- Fila 1: Para las dos cards cuadradas -->
+            <div class="row g-3">
+                <!-- Card Bebidas -->
+                <div class="col-6">
+                    <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
+                        <img src="assets/images/bebidas.webp" alt="Categoría de Bebidas" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-label">
+                            <h3 class="menu-item-title">Bebidas</h3>
                         </div>
-                        <!-- FIN Panel para MIERCOLES PRINCIPALES -->
-
-                        <!-- INICIO Panel para MIERCOLES ACOMPAÑAMIENTOS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ACOMPAÑAMIENTOS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Ravioles
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Arroz Blanco
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para MIERCOLES ACOMPAÑAMIENTOS -->
-
-                        <!-- INICIO Panel para MIERCOLES ENSALADAS -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                ENSALADAS:
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">
-                                                <span class="product-title-bs5">•</span> Ensalada de Atún
-                                                <br>
-                                                <span class="product-title-bs5">•</span> Ensalada Mixta
-                                            </p>
-                                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $35.000
-                                            </p> -->
-                                            <!-- <small class="product-note-bs5 text-muted">
-
-                                            </small> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <!-- <img src="assets/images/terra_brasil.webp" alt="Feijoada" class="img-fluid rounded-3"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN Panel para MIERCOLES ENSALADAS -->
-                    </div>
+                    </a>
                 </div>
-                
-                
-                <div class="tab-pane fade" id="jueves-pane" role="tabpanel" tabindex="0">
+                <!-- Card Postres -->
+                <div class="col-6">
+                    <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="postres-tab" data-bs-toggle="tab" data-bs-target="#postres-pane" role="tab">
+                        <img src="assets/images/postres.webp" alt="Categoría de Postres" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-label">
+                            <h3 class="menu-item-title">Postres</h3>
+                        </div>
+                    </a>
                 </div>
-                <div class="tab-pane fade" id="viernes-pane" role="tabpanel" tabindex="0">
-                </div>
-                <div class="tab-pane fade" id="sabado-pane" role="tabpanel" tabindex="0">
-                </div>
-                <div class="tab-pane fade" id="domingo-pane" role="tabpanel" tabindex="0">
-                </div>
-                <!-- Panel para BEBIDAS -->
-                <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" tabindex="0">
-                    <div class="row g-4">
-                        <!-- Producto 1: refresco -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">Coca Cola</h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                            <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/bebidas-producto1.webp" alt="#" class="img-fluid rounded-3">
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <!-- FIN Producto 1: refresco -->
+            </div>
 
-                        <!-- Producto 2: refresco -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">Sprite</h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                            <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/bebidas-producto2.webp" alt="#" class="img-fluid rounded-3">
-                                    </div>
-                                </div> 
-                            </div>
+            <!-- Fila 2: Para la nueva card horizontal de Café y Té -->
+            <div class="row g-3 mt-3"> <!-- mt-3 es un pequeño margen para separar las filas -->
+                <div class="col-12">
+                    <a href="#" class="nav-link menu-item-card text-decoration-none" id="cafeyte-tab" data-bs-toggle="tab" data-bs-target="#cafeyte-pane" role="tab">
+                        <!-- Asegúrate de tener una imagen en esta ruta -->
+                        <img src="assets/images/buffet/card_img/cafe_y_te.webp" alt="Categoría de Café y Té" class="menu-item-img large-img" loading="lazy">
+                        <div class="menu-item-label">
+                            <h3 class="menu-item-title">Café y Té</h3>
                         </div>
-                        <!-- FIN Producto 2: refresco -->
-
-                        <!-- Producto 1: Cóctel -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">Sexo en la playa</h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Vodka, licor de durazno (peach schnapps), jugo de naranja, jugo de arándano (cranberry).</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                            <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/bebidas-producto3.webp" alt="#" class="img-fluid rounded-3">
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <!-- FIN Producto 1: Cóctel -->
-
-                        <!-- Producto 2: Cóctel -->
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">Moscow Mule</h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Vodka, ginger beer (cerveza de jengibre), jugo de lima fresca, hielo.</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                            <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/bebidas-producto4.webp" alt="#" class="img-fluid rounded-3">
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <!-- FIN Producto 2: Cóctel -->
-                    </div>
-                </div>
-                <!-- Panel para POSTRES -->
-                <div class="tab-pane fade" id="postres-pane" role="tabpanel" tabindex="0">
-                    <div class="row g-4">
-
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                Brigadeiro (Brasil)
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Dulce de leche condensado con cacao y granas de chocolate</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $20.000
-                                            </p>
-                                            <small class="product-note-bs5 text-muted">
-                                                Porción personal
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/postres-producto1.webp" alt="Torta de Chocolate" class="img-fluid rounded-3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="card card-product-bs5 overflow-hidden p-2">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-7">
-                                        <div class="card-body p-2">
-                                            <h3 class="product-title-bs5 h5 mb-1">
-                                                Torta Húmeda de Chocolate
-                                            </h3>
-                                            <p class="product-description-bs5 small text-muted mb-2">Nuestra clásica torta de chocolate con abundante fudge.</p>
-                                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                                $20.000
-                                            </p>
-                                            <small class="product-note-bs5 text-muted">
-                                                Porción personal
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <img src="assets/images/postres-producto2.webp" alt="Torta de Chocolate" class="img-fluid rounded-3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- =================================================================
-            FIN DEL SISTEMA DE MENÚ UNIFICADO
-        ================================================================== -->
+    </section>
+
+    <!-- 2. CONTENIDO DE CADA CATEGORÍA -->
+    <div class="tab-content mt-4" id="menuTabContent">
+        
+        <!-- Panel para PRINCIPALES -->
+        <div class="tab-pane fade" id="principales-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                
+                <!-- Inicio producto (1) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/feijoada_completa.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Feijoada Completa
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Plato brasileño tradicional con frijoles negros, carnes ahumadas, chorizo, costilla y acompañado de arroz, farofa (harina de mandioca tostada) y naranja.
+                            </p>
+                            <!-- <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                $45.000
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (1) Principales -->
+
+                <!-- Inicio producto (2) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/feijoada_preto.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Feijoada Preto
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Versión más sencilla de la feijoada, centrada en frijoles negros con carne de cerdo y embutidos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (2) Principales -->
+                
+                <!-- Inicio producto (3) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/poroto_carioca.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Poroto Carioca
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Frijoles pintos cocidos con especias, carne o embutidos, muy consumido en la cocina brasileña diaria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (3) Principales -->
+
+                <!-- Inicio producto (4) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/cazuela_de_mondongo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Cazuela de Mondongo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Guiso de mondongo (callos) con verduras, papas, tomate y condimentos, típico de Paraguay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (4) Principales -->
+
+                <!-- Inicio producto (5) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/escalopirio_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Escalopírio de Carne
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Bifes de carne rebozados, cocidos en salsa suave de tomate, cebolla y pimientos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (5) Principales -->
+                
+                <!-- Inicio producto (6) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/pollo_al_escabeche.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Pollo al Escabeche
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pollo marinado en vinagre, cebolla, zanahoria y especias, servido frío o tibio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (6) Principales -->
+
+                <!-- Inicio producto (7) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/estofado_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Estofado de Carne
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Carne cocida a fuego lento con papas, zanahorias, cebolla, tomate y especias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (7) Principales -->
+                
+                <!-- Inicio producto (8) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/pollo_agridulce.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Pollo Agridulce
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pollo salteado con pimientos y piña, en salsa agridulce a base de soja y azúcar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (8) Principales -->
+
+                <!-- Inicio producto (9) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/canelon_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Canelón de Carne / Pollo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pasta rellena de carne o pollo, servida con salsa roja o blanca y gratinada con queso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (9) Principales -->
+
+                <!-- Inicio producto (10) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/lasaña_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Lasaña de Carne / Pollo / Jamón y Queso
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Capas de pasta intercaladas con salsas, carne, pollo o jamón y queso, gratinada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (10) Principales -->
+
+                <!-- Inicio producto (11) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/strogonoff_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Strogonoff de Carne / Pollo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Plato brasileño a base de tiras de carne o pollo en salsa cremosa con champiñones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (11) Principales -->
+
+                <!-- Inicio producto (12) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/duquesa_de_pollo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Duquesa de Pollo c/ Jamón y Queso
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pechuga de pollo rellena con jamón y queso, empanizada y frita.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (12) Principales -->
+
+                <!-- Inicio producto (13) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/milanesa_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Milanesa de Carne / Pollo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Carne o pollo rebozado con pan rallado y frito, clásico en Paraguay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (13) Principales -->
+
+                <!-- Inicio producto (14) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/milanesa_a_caballo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Milanesa a Caballo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Milanesa servida con huevo frito encima.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (14) Principales -->
+
+                <!-- Inicio producto (15) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/milanesa_napolitana.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Milanesa Napolitana
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Milanesa cubierta con salsa de tomate, jamón y queso gratinado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (15) Principales -->
+
+                <!-- Inicio producto (16) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/bife_a_caballo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Bife a Caballo c/ Huevo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Bife de carne a la plancha servido con huevo frito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (16) Principales -->
+
+                <!-- Inicio producto (17) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/besito_al_vino.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Besito al Vino
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Albóndigas de carne cocidas en salsa de vino y tomate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (17) Principales -->
+                
+                <!-- Inicio producto (18) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/marinera_de_carne.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Marinera de Carne / Pollo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Carne o pollo rebozado en masa de harina y frito, típico en Paraguay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (18) Principales -->
+                
+                <!-- Inicio producto (19) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/marinera_napolitana.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Marinera Napolitana
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Marinera cubierta con salsa de tomate, jamón y queso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (19) Principales -->
+
+                <!-- Inicio producto (20) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/pollo_a_la_crema.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Pollo a la Crema
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pollo cocinado en salsa cremosa de leche o nata con cebolla y champiñones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (20) Principales -->
+
+                <!-- Inicio producto (21) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/sufle_de_verduras.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Suflé de Verduras / Jamón y Queso
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Preparación horneada de verduras o jamón con queso en mezcla de huevo batido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (21) Principales -->
+
+                <!-- Inicio producto (22) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/grille_con_cebolla.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Grillé con Cebolla
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Carne a la plancha acompañada de cebolla caramelizada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (22) Principales -->
+
+                <!-- Inicio producto (23) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/grille_napolitana.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Grillé Napolitana
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Carne grillada cubierta con salsa de tomate, jamón y queso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (23) Principales -->
+
+                <!-- Inicio producto (24) Principales -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/principales/costeleta_de_cerdo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Costeleta de Cerdo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Chuleta de cerdo a la plancha o frita, marinada con especias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (24) Principales -->
+
+            </div>
+        </div>
+    
+        <!-- Panel para GUARNICIONES -->
+        <div class="tab-pane fade" id="guarniciones-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                <!-- Inicio producto (1) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/arroz_frito_al_ajo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Arroz Frito al Ajo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Arroz salteado con ajo dorado en aceite, de sabor intenso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (1) Guarniciones -->
+
+                <!-- Inicio producto (2) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_al_ajo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo al Ajo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pasta salteada con ajo y aceite.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (2) Guarniciones -->
+
+                <!-- Inicio producto (3) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_a_la_manteca.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo a la Manteca
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Fideos mezclados con manteca derretida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (3) Guarniciones -->
+
+                <!-- Inicio producto (4) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_a_la_crema.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo a la Crema
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pasta servida con salsa cremosa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (4) Guarniciones -->
+
+                <!-- Inicio producto (5) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_al_pesto.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo al Pesto
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Fideos acompañados con salsa de albahaca, ajo y queso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (5) Guarniciones -->
+
+                <!-- Inicio producto (6) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_chino.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo Chino
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Tallarines salteados con verduras y salsa de soja.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (6) Guarniciones -->
+
+                <!-- Inicio producto (7) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/fideo_a_la_carbonara.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fideo a la Carbonara
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pasta con crema, panceta y queso rallado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (7) Guarniciones -->
+
+                <!-- Inicio producto (8) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/arroz_con_queso.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Arroz con Queso
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Arroz cremoso con queso fundido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (8) Guarniciones -->
+
+                <!-- Inicio producto (9) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/ñoquis.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ñoquis
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Bolitas de papa mezcladas con harina, hervidas y servidas con salsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (9) Guarniciones -->
+
+                <!-- Inicio producto (10) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/ravioles_de_pollo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ravioles de Pollo / Jamón / Carne
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pasta rellena de pollo, jamón o carne, servida con salsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (10) Guarniciones -->
+
+                <!-- Inicio producto (11) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/arroz_primavera.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Arroz Primavera
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Arroz con verduras variadas como zanahoria, arvejas y choclo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (11) Guarniciones -->
+
+                <!-- Inicio producto (12) Guarniciones -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/guarniciones/arroz_piamontese.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Arroz Piamontese
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Arroz cremoso con champiñones y crema.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (12) Guarniciones -->
+            </div>
+        </div>
+
+        <!-- Panel para PARRILLAS -->
+        <div class="tab-pane fade" id="parrillas-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                <!-- Inicio producto (1) Parrillas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/parrillas/vacio.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Vacío
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Un clásico de la parrilla, corte jugoso y tierno proveniente de la parte baja de la res.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (1) Parrillas -->
+
+                <!-- Inicio producto (2) Parrillas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/parrillas/costilla.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Costilla
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Corte tradicional muy valorado por su sabor y jugosidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (2) Parrillas -->
+
+                <!-- Inicio producto (3) Parrillas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/parrillas/cupim.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Cupim
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Corte típico de Brasil, extraído de la parte superior de la res (cercana a la joroba). De textura marmoleada y extremadamente sabrosa, se prepara a la parrilla o al horno a fuego bajo. Su jugosidad lo convierte en un plato estrella para compartir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (3) Parrillas -->
+
+                <!-- Inicio producto (4) Parrillas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/parrillas/bondiola_de_cerdo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Bondiola de Cerdo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Parte del cuello del cerdo, reconocida por su sabor profundo y ternura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (4) Parrillas -->
+            </div>
+        </div>
+
+        <!-- Panel para ENSALADAS -->
+        <div class="tab-pane fade" id="ensaladas-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+
+                <!-- Inicio producto (1) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_papa.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Papa
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Papas hervidas mezcladas con mayonesa, cebolla, huevo duro y perejil.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (1) Ensaladas -->
+
+                <!-- Inicio producto (2) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_alemana.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada Alemana
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Papas hervidas, salchichas, cebolla y mayonesa, típica de la cocina alemana-brasileña.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (2) Ensaladas -->
+
+                <!-- Inicio producto (3) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_rusa.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada Rusa
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Papas, zanahorias, arvejas y mayonesa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (3) Ensaladas -->
+
+                <!-- Inicio producto (4) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_arroz.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Arroz
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Arroz frío acompañado de verduras, a veces con pollo o jamón.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (4) Ensaladas -->
+
+                <!-- Inicio producto (5) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_poroto.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Poroto
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Frijoles cocidos con cebolla, tomate, pimiento y aliño de vinagre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (5) Ensaladas -->
+
+                <!-- Inicio producto (6) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_lechuga.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Lechuga
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Hojas frescas de lechuga con aderezo simple de aceite y limón.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (6) Ensaladas -->
+
+                <!-- Inicio producto (7) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_lechuga_repollada.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Lechuga Repollada
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Lechuga repollada finamente picada con aliño ligero.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (7) Ensaladas -->
+
+                <!-- Inicio producto (8) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/bailarina.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Bailarina
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Ensalada colorida de vegetales variados, similar a ensalada primavera.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (8) Ensaladas -->
+
+                <!-- Inicio producto (9) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_tomate.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Tomate
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Rodajas de tomate fresco con cebolla, aceite y vinagre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (9) Ensaladas -->
+
+                <!-- Inicio producto (10) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_repollo_blanco_y_morado.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Repollo Blanco c/ Morado
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Repollo blanco y morado en juliana, aderezado con vinagreta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (10) Ensaladas -->
+
+                <!-- Inicio producto (11) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_cebolla_a_la_vinagreta.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Cebolla a la Vinagreta
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Cebolla cortada en pluma con vinagre, aceite y condimentos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (11) Ensaladas -->
+
+                <!-- Inicio producto (12) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/vinagreta_de_verdura.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Vinagreta de Verdura
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Verduras varias (pimiento, cebolla, tomate) marinadas en vinagre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (12) Ensaladas -->
+
+                <!-- Inicio producto (13) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/pepino_agridulce.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Pepino Agridulce
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pepino en rodajas con mezcla de vinagre, azúcar y sal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (13) Ensaladas -->
+
+                <!-- Inicio producto (14) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_huevo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Huevo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Huevos duros picados con mayonesa y verduras.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (14) Ensaladas -->
+
+                <!-- Inicio producto (15) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_de_remolacha.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada de Remolacha
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Remolachas hervidas con cebolla y aliño simple.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (15) Ensaladas -->
+
+                <!-- Inicio producto (16) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/verdura_primavera.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Verdura Primavera
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Mezcla de verduras de estación como zanahoria, arvejas y choclo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (16) Ensaladas -->
+
+                <!-- Inicio producto (17) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/repollo_al_ajo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Repollo al Ajo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Repollo salteado o marinado con ajo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (17) Ensaladas -->
+
+                <!-- Inicio producto (18) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/ensalada_mixta.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Ensalada Mixta
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Combinación de lechuga, tomate, cebolla y pepino.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (18) Ensaladas -->
+
+                <!-- Inicio producto (19) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/salpicon_de_pollo.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Salpicón de Pollo
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Pollo desmenuzado mezclado con verduras y mayonesa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (19) Ensaladas -->
+
+                <!-- Inicio producto (20) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/berro.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Berro
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Hojas frescas de berro, servidas como ensalada simple.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (20) Ensaladas -->
+
+                <!-- Inicio producto (21) Ensaladas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/ensaladas/rucula.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Rúcula
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Hojas frescas de rúcula, de sabor amargo y picante.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (21) Ensaladas -->
+            </div>
+        </div>
+
+        <!-- Panel para BEBIDAS -->
+        <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                <!-- Inicio producto (1) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/agua.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Agua
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Con o sin gas.
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (1) Bebidas -->
+                
+                <!-- Inicio producto (2) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/jugos/jugos_naturales.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Jugos Naturales
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Durazno, Piña, Naranja, Limón
+                                <br>
+                                Jarra grande - Jarra pequeña - Vaso
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲35.000 / ₲25.000 / ₲13.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (2) Bebidas -->
+
+                <!-- Inicio producto (3) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/antarctica.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Antarctica
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Normal y Zero.
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (3) Bebidas -->
+
+                <!-- Inicio producto (4) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/coca_cola.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Coca Cola
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Normal y Zero. (500ml - 250ml)
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000 / ₲6.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (4) Bebidas -->
+
+                <!-- Inicio producto (5) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/fanta.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Fanta
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Naranja, Guaraná, Piña. (500ml - 250ml)
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000 / ₲6.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (5) Bebidas -->
+
+                <!-- Inicio producto (6) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/sprite.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Sprite
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Normal y Zero. (500ml - 250ml)
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000 / ₲6.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (6) Bebidas -->
+
+                <!-- Inicio producto (7) Bebidas -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/bebidas/refrescos/schweppes.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Schweppes
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Citrus y Tónica.
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲10.000 / ₲12.000
+                            </p></div>
+                        </div>
+                </div>
+                <!-- Fin producto (7) Bebidas -->
+
+            </div>
+        </div>
+        
+        <!-- Panel para POSTRES -->
+        <div class="tab-pane fade" id="postres-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                <!-- Inicio producto (1) Postres -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/postres/flan_de_leche.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Flan de Leche
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Clásico flan de huevo con caramelo, suave y cremoso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (1) Postres -->
+
+                <!-- Inicio producto (2) Postres -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/postres/flan_con_helado.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Flan con Helado
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Postre clásico de flan cremoso acompañado de una bola de helado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (2) Postres -->
+
+                <!-- Inicio producto (3) Postres -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/postres/crema_de_leche.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Crema de Leche
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Postre simple y ligero a base de leche azucarada y espesa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (3) Postres -->
+
+                <!-- Inicio producto (4) Postres -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/postres/mousse_de_maracuya.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Mousse de Maracuyá
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Postre brasileño cremoso elaborado con pulpa de maracuyá, leche condensada y crema.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (4) Postres -->
+
+                
+            </div>
+        </div>
+
+        <!-- ================================================================================ -->
+        <!-- INICIO: Panel para CAFÉ Y TÉ                                                     -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="cafeyte-pane" role="tabpanel" tabindex="0">
+            <div class="row g-4">
+                <!-- Inicio cafe (1) -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/cafe y te/cafes.webp" class="card-img-top" alt="Café Espresso">
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Café
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Expresso Americano, Café con Leche, Expresso Chico.
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲16.000 / ₲10.000
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin cafe (1) -->
+
+                <!-- Inicio té (2) -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/cafe y te/tes.webp" class="card-img-top" alt="Café Espresso">
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Té
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                Té Boldo, Té Manzanilla, Té Verde, Té Rojo, Té Anís, Té Menta, Té Limón
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">
+                                ₲12.000
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin té (2) -->
+
+                
+            </div>
+        </div>
+        <!-- ================================================================================ -->
+        <!-- FIN: Panel para CAFÉ Y TÉ                                                        -->
+        <!-- ================================================================================ -->
+    </div>
+
+<!-- =================================================================
+    FIN DEL SISTEMA DE MENÚ
+================================================================== -->
 
     </main>
 
     <!-- =================================================================
-    FOOTER - PIE DE PÁGINA
+    FOOTER
     ================================================================== -->
     <footer class="footer-section text-center">
         <div class="container">
             <small class="d-block copyright-text">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
-                
             <small class="d-block credit-text">
                 Menú digital desarrollado por 
                 <a href="#" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
@@ -678,13 +1544,9 @@
     </footer>
 
 
-    <!-- ============== BOOTSTRAP 5 JS ============== -->
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <!-- ============== SCRIPT PERSONALIZADO (SI ES NECESARIO) ============== -->
     <script src="js/script.js" defer></script>
 
-
 </body>
-
 </html>

@@ -39,9 +39,9 @@ body {
 /* El banner principal con su altura fija */
 .main-banner {
     height: 250px;
-    background-image: url('../assets/images/background.webp');
+    background-image: url('../assets/background/background-top.webp');
     background-size: cover;
-    background-position: 50% 20%;
+    background-position: 50% 10%;
 }
 
 /* La barra roja, también con su altura fija */
@@ -410,7 +410,7 @@ body {
 }
 
 /* =================================================================
-    BOTONES DE DELIVERY Y DESCUENTO STERRA BRASIL STYLES
+    BOTONES DE DELIVERY Y DESCUENTO TERRA BRASIL STYLES
    ================================================================= */
     
 .menu-buffet .info-buttons-section{
@@ -454,7 +454,7 @@ body {
     object-fit: cover;
     display: block;
     aspect-ratio: 4 / 3;
-    object-position: center 80%;
+    object-position:center 80%;
 }
 
 .menu-item-card.square-card .menu-item-img {
@@ -732,7 +732,7 @@ html {
    ================================================================= */
 
 /* Estas reglas se aplican solo a pantallas de 768px o más (laptops, escritorios) */
-@media (min-width: 400px) {
+@media (min-width: 768px) {
     
     /* 1. Seleccionamos el contenedor de las tarjetas de producto.
     - 'flex-wrap: wrap' es la clave para permitir que varias tarjetas quepan en una línea.
@@ -763,11 +763,160 @@ html {
     */
     .nav-wrapper-scrollable {
         display: flex;
-        
-        /* 
-            Esta es la propiedad clave: centra horizontalmente
-            el contenido del contenedor flex (en este caso, la lista <ul> con los días).
-        */
         justify-content: center;
     }
+}
+
+/* =================================================================
+    17. ESTILOS PERSONALIZADOS PARA EL ACORDEÓN
+   ================================================================= */
+
+/* Contenedor principal del acordeón */
+.accordion {
+    --bs-accordion-border-radius: 16px;
+    --bs-accordion-border-color: #EAEAEA;
+    --bs-accordion-bg: transparent;
+
+    /* Iconos de la flecha en color blanco */
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Estilo del item individual del acordeón */
+.accordion-item {
+    border-radius: var(--bs-accordion-border-radius);
+    overflow: hidden;
+    border: 1px solid #EAEAEA;
+}
+
+.accordion-item:not(:first-of-type) {
+    border: 1px solid #EAEAEA;
+}
+
+/* Cabecera del acordeón */
+.accordion-header {
+    background-color: transparent;
+}
+
+/* Botón del acordeón (Ahora se aplica a AMBOS estados, abierto y cerrado) */
+.accordion-button {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white; 
+    background-color: var(--color-primary-red);
+    box-shadow: none;
+}
+
+/* =================================================================
+    LA CORRECCIÓN CLAVE:
+    Forzamos los colores también para el estado abierto (:not(.collapsed))
+    para sobreescribir el azul de Bootstrap.
+   ================================================================= */
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: var(--color-primary-red);
+    box-shadow: none;
+}
+/* ================================================================= */
+
+/* Anula el resplandor azul cuando el botón está enfocado (seleccionado) */
+.accordion-button:focus {
+    z-index: 3;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Cuerpo del acordeón (donde van los productos) con fondo blanco */
+.accordion-body {
+    padding: 1rem 0.5rem 0.5rem;
+    background-color: #FFFFFF;
+}
+
+/* =================================================================
+    18. ESTILOS PERSONALIZADOS PARA EL SEPARADOR
+   ================================================================= */
+
+.line {
+    text-align: center;
+    color: var(--color-primary-red);
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =================================================================
+    19. SECCIÓN DE INFORMACIÓN DEL TENEDOR LIBRE
+   ================================================================= */
+.buffet-info-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.buffet-info-card {
+    background-color: var(--color-primary-red);
+    color: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.buffet-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.buffet-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.buffet-day-time {
+    text-align: left;
+}
+
+.buffet-day, .buffet-price p, .buffet-kilo-option p {
+    margin: 0;
+}
+
+.buffet-day {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.buffet-time {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.buffet-price {
+    font-weight: 800;
+    font-size: clamp(1.5rem, 6vw, 2rem); /* Fuente responsiva */
+    text-align: right;
+    white-space: nowrap; /* Evita que el precio se parta en dos líneas */
+}
+
+.buffet-divider {
+    border: 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 1.5rem auto;
+}
+
+.buffet-kilo-option {
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.buffet-kilo-option strong {
+    font-size: 1rem;
 }

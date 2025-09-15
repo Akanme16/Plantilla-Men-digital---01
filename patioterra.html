@@ -2,68 +2,51 @@
 <html lang="es">
 
 <head>
-    <!-- ============== META TAGS ============== -->
+    <!-- =================================================================
+        BLOQUE 1: CONFIGURACIÓN GENERAL DE LA PÁGINA (METADATOS, TÍTULO Y ENLACES)
+    ================================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre el menú digital de TERRA BRASIL. Sabores auténticos, promociones especiales y servicio de delivery.">
-    <meta name="keywords" content="TERRA BRASIL, restaurante, menú digital, comida brasileña, delivery">
-    <meta name="author" content="Restaurante TERRA BRASIL">
+    <meta name="description" content="Descubre el menú digital de Patio Terra. Hamburguesas, pizzas, lomitos y más.">
+    <meta name="keywords" content="Patio Terra, restaurante, menú digital, hamburguesas, pizzas, lomitos, delivery">
+    <meta name="author" content="Restaurante PATIO TERRA">
 
-    <!-- ============== TÍTULO DE LA PÁGINA ============== -->
-    <title>Menú Digital - Restaurante TERRA BRASIL</title>
+    <title>Menú Digital - Patio Terra</title>
 
-    <!-- ============== FAVICON ============== -->
-    <!-- Consejo: Crea un favicon de 32x32 y colócalo en /assets/images/ -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
-    <!-- ============== BOOTSTRAP 5 CSS ============== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- ============== GOOGLE FONTS (OPCIONAL, PARA UN MEJOR ESTILO) ============== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- ============== HOJA DE ESTILOS PERSONALIZADA ============== -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="menu-lomiteria">
+    <!-- =================================================================
+        BLOQUE 2: BOTÓN FIJO PARA VOLVER A LA PÁGINA DE INICIO (index.html)
+    ================================================================== -->
     <a href="index.html" class="fixed-home-btn" aria-label="Volver a la página principal">
-        <!-- Usamos el mismo icono de flecha, pero podrías cambiarlo por un icono de "casa" si prefieres -->
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
     </a>
 
     <!-- =================================================================
-            HEADER - CONTIENE EL BANNER SUPERIOR Y EL LOGO
-================================================================== -->
-    
-        <header class="header-section position-relative"> <!-- 1. Añadimos position-relative al contenedor principal -->
-        
-            <!-- BANNER PRINCIPAL -->
-            <div class="main-banner"></div>
-        
-            <!-- Espacio rojo superior -->
-            <div class="banner-space"></div>
-        
-            <!-- Contenedor del logo (Ahora posicionado absolutamente) -->
-            <!-- 2. Se posiciona absolutamente relativo al header-section -->
-            <div class="logo-wrapper"> 
-                <div class="logo-container">
-                    <img src="assets/images/logo_lp.png" alt="Logo de PATIO TERRA" class="logo">
-                </div>
+        BLOQUE 3: HEADER (CONTIENE EL BANNER SUPERIOR, BARRA ROJA Y LOGO)
+    ================================================================== -->
+    <header class="header-section position-relative">
+        <div class="main-banner"></div>
+        <div class="banner-space"></div>
+        <div class="logo-wrapper"> 
+            <div class="logo-container">
+                <img src="assets/images/logo_lp.png" alt="Logo de PATIO TERRA" class="logo">
             </div>
-        </header>
+        </div>
+    </header>
         
     <!-- =================================================================
-    MAIN - CONTENIDO PRINCIPAL DE LA PÁGINA
+        BLOQUE 4: CONTENIDO PRINCIPAL DE LA PÁGINA
     ================================================================== -->
     <main>
-
-        <!-- =================================================================
-        SECCIÓN DE TÍTULO Y DESCRIPCIÓN
-        Fondo: #F2F2F2
-        ================================================================== -->
+        <!-- Inicio Bloque 4.1: Sección con el nombre del restaurante y el eslogan -->
         <section class="title-section text-center">
             <div class="container">
                 <h1 class="main-title display-4 fw-bolder text-dark">Patio Terra</h1>
@@ -71,492 +54,1691 @@
             </div>
         </section>
         
-
-    <!-- =================================================================
-        SECCIÓN DE BOTONES / ALERTAS
-    ================================================================== -->
-        <section class="info-buttons-section container my-4">
-            <div class="row g-3 justify-content-center">
-            
-                <!-- ===== Botón de Servicio de Delivery ===== -->
-                <div class="col-6">
-                    <a href="#" class="info-card text-decoration-none d-flex flex-column justify-content-center align-items-center">
-                        <p class="delivery-subtitle-final m-0">SERVICIO DE</p>
-                        <p class="delivery-maintext-final m-0">DELIVERY</p>
-                    </a>
-                </div>
-            
-                <!-- ===== Botón de Promoción de Viernes ===== -->
-                <div class="col-6">
-                    <!-- 
-                        - Usamos d-flex y align-items-center para alinear verticalmente las dos columnas.
-                        - justify-content-center centra todo el contenido horizontalmente.
-                    -->
-                    <a href="#" class="info-card text-decoration-none d-flex align-items-center justify-content-center">
-                        <!-- Columna Izquierda (Viernes, Descuento) -->
-                        <div class="me-3"> <!-- me-3 añade un margen a la derecha (margin-end) -->
-                            <p class="discount-day-final m-0">VIERNES</p>
-                            <p class="discount-subtitle-final m-0">DESCUENTO</p>
-                        </div>
-                        <!-- Columna Derecha (20%, En Carnes) -->
-                        <div class="text-center">
-                            <p class="discount-percentage-final m-0">20%</p>
-                            <p class="discount-product-final m-0">EN CARNES</p>
-                        </div>
-                    </a>
-                </div>
-            
-            </div>
-        </section>
-
-        <!-- =================================================================
-        SECCIÓN DEL SLIDER DE IMÁGENES (MODIFICADA)
-        Las imágenes ahora se controlan desde el archivo CSS.
-        ================================================================== -->
+        <!-- Inicio Bloque 4.2: Carrusel o Slider de imágenes promocionales -->
         <section class="slider-section container my-4">
             <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicadores del Slider (los puntos inferiores) -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            
-                <!-- Contenido de las diapositivas -->
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <!-- NOTA: Ahora es un div vacío con una clase específica. YA NO HAY ETIQUETA <img> ADENTRO. -->
                     <div class="carousel-item active slider-bg-1"></div>
-                
-                    <!-- Slide 2 -->
                     <div class="carousel-item slider-bg-2"></div>
-                
-                    <!-- Slide 3 -->
                     <div class="carousel-item slider-bg-3"></div>
                 </div>
             </div>
         </section>
-
-        
-        
     </main>
 
     <!-- =================================================================
-        SECCIÓN DE CATEGORIAS CON FUNCIONALIDAD DE
+        BLOQUE 5: NAVEGACIÓN DEL MENÚ (CARDS DE CATEGORÍAS)
+        Cada '<a>' funciona como un botón que activa su panel de contenido correspondiente más abajo.
     ================================================================== -->
-    <!-- 1. NAVEGACIÓN (TUS CARDS ORIGINALES) -->
-    <!-- El 'role="tablist"' se añade al contenedor de las cards -->
     <section class="menu-items-section container my-4" id="seccion-menu-tabs" role="tablist">
         <h2 class="text-center mb-4">Menú</h2>
     
         <div class="row g-3">
-            <!-- Card Hamburguesas -->
+            <!-- Botón Categoría Hamburguesas -->
             <div class="col-6">
-                <!-- CAMBIO MÍNIMO: Solo añadimos los atributos data-bs-* y de accesibilidad. -->
-                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#hamburguesas-pane" role="tab" aria-controls="hamburguesas-pane" aria-selected="false">
-                    <img src="assets/images/hamburguesas.webp" alt="Categoría de Hamburguesas" class="menu-item-img">
-                    <div class="menu-item-label">
-                        <h3 class="menu-item-title">
-                            Hamburguesa
-                        </h3>
-                    </div>
+                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#hamburguesas-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/hamburguesas_card.webp" alt="Categoría de Hamburguesas" class="menu-item-img">
+                    <div class="menu-item-label"><h3 class="menu-item-title">Hamburguesa</h3></div>
                 </a>
             </div>
         
-            <!-- Card Pizzas -->
+            <!-- Botón Categoría Pizzas -->
             <div class="col-6">
-                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#pizzas-pane" role="tab" aria-controls="pizzas-pane" aria-selected="false">
-                    <img src="assets/images/pizzas.webp" alt="Categoría de Pizzas" class="menu-item-img">
-                    <div class="menu-item-label">
-                        <h3 class="menu-item-title">
-                            Pizza
-                        </h3>
-                    </div>
+                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#pizzas-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/pizzas_card.webp" alt="Categoría de Pizzas" class="menu-item-img">
+                    <div class="menu-item-label"><h3 class="menu-item-title">Pizza</h3></div>
                 </a>
             </div>
         
-            <!-- Card Lomito Árabe -->
+            <!-- Botón Categoría Lomito Árabe -->
             <div class="col-12">
-                <a href="#" class="menu-item-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#lomitoarabe-pane" role="tab" aria-controls="lomitoarabe-pane" aria-selected="false">
-                    <img src="assets/images/lomito-arabe.webp" alt="Categoría de Lomito Árabe" class="menu-item-img large-img">
-                    <div class="menu-item-label">
-                        <h3 class="menu-item-title">
-                            Lomito Árabe
-                        </h3>
-                    </div>
+                <a href="#" class="menu-item-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#lomitoarabe-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/lomito_arabe_card.webp" alt="Categoría de Lomito Árabe" class="menu-item-img large-img">
+                    <div class="menu-item-label"><h3 class="menu-item-title">Lomito Árabe</h3></div>
                 </a>
             </div>
         
-            <!-- ... Card Sandwiches -->
+            <!-- Botón Categoría Sándwiches -->
             <div class="col-4">
-                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#sandwiches-pane" role="tab" aria-controls="sandwiches-pane" aria-selected="false">
-                    <img src="assets/images/sandwich.webp" alt="Categoría de Sandwiches" class="menu-item-img">
-                    <div class="menu-item-label small-label">
-                        <h4 class="menu-item-title-small">
-                            Sándwich
-                        </h4>
-                    </div>
+                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#sandwiches-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/sandwich_card.webp" alt="Categoría de Sandwiches" class="menu-item-img">
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Sándwich</h4></div>
                 </a>
             </div>
-            <!-- ... Card Papas Fritas -->
+
+            <!-- Botón Categoría Para Picar -->
             <div class="col-4">
-                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#papasfritas-pane" role="tab" aria-controls="papasfritas-pane" aria-selected="false">
-                    <img src="assets/images/papasfritas.webp" alt="Categoría de Papas Fritas" class="menu-item-img">
-                    <div class="menu-item-label small-label">
-                        <h4 class="menu-item-title-small">
-                            Papas Fritas
-                        </h4>
-                    </div>
+                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#parapicar-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/para_picar_card.webp" alt="Categoría Para Picar" class="menu-item-img">
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Para Picar</h4></div>
                 </a>
             </div>
-            <!-- ... Card Bebidas -->
+
+            <!-- Botón Categoría Bebidas -->
             <div class="col-4">
-                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab" aria-controls="bebidas-pane" aria-selected="false">
-                    <img src="assets/images/bebidas.webp" alt="Categoría de Bebidas" class="menu-item-img">
-                    <div class="menu-item-label small-label">
-                        <h4 class="menu-item-title-small">
-                            Bebidas
-                        </h4>
+                <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/bebidas_card.webp" alt="Categoría de Bebidas" class="menu-item-img">
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Bebidas</h4></div>
+                </a>
+            </div>
+
+            <!-- Botón Categoría Cócteles -->
+            <div class="col-12">
+                <a href="#" class="menu-item-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#cocteles-pane" role="tab">
+                    <img src="assets/images/patio_terra/cards_img/cocteles_y_destilados_card.webp" alt="Categoría Cócteles" class="menu-item-img large-img">
+                    <div class="menu-item-label">
+                        <h3 class="menu-item-title">Cócteles y Destilados</h3>
                     </div>
                 </a>
             </div>
         </div>
     </section>
+
     <!-- =================================================================
-        CONTENIDO DE LAS PESTAÑAS
-        ================================================================== -->
+        BLOQUE 6: CONTENEDOR PARA LOS PRODUCTOS DE CADA CATEGORÍA
+        Inicialmente todos los paneles están ocultos. El JS los muestra cuando se hace clic en una categoría.
+    ================================================================== -->
     <div class="tab-content" id="menuTabContent">
-        <!-- ======================= PANEL HAMBURGUESAS ======================= -->
-        <div class="tab-pane fade" id="hamburguesas-pane" role="tabpanel" aria-labelledby="hamburguesas-tab" tabindex="0">
-            <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: Hamburguesa -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Paraguaya Especial</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan artesanal dorado en manteca, medallón de carne vacuna 100% jugosa, queso Paraguay derretido, huevo frito a la plancha, rodajas de chorizo paraguayo asado, lechuga fresca, tomate, cebolla morada, salsas caseras (mayonesa con ajo, ketchup y mostaza), y el toque final: mbejú crocante como topping.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$50.000</p>
-                                        <small class="product-note-bs5 text-muted">Sabor auténtico y contundente al estilo nacional</small>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/hamburguesa-producto1.webp" alt="#" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--FIN Producto 1: Hamburguesa -->
 
-                    <!-- Producto 2: Hamburguesa -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">La Criolla Suprema</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan artesanal dorado, medallón de carne vacuna a la plancha, queso Paraguay fundido, chorizo paraguayo en rodajas, huevo frito, panceta crocante, tomate fresco, lechuga crespa, cebolla morada en aros</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$45.000</p>
-                                        <small class="product-note-bs5 text-muted">Sabor auténtico y contundente al estilo nacional</small>
+        <!-- ================================================================================ -->
+        <!-- INICIO: HAMBURGUESAS                                                             -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="hamburguesas-pane" role="tabpanel" tabindex="0">
+            <div class="container py-4">
+            
+                <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="accordion-hamburguesas">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                        Agregados extras
+                                    </button>
+                                </h2>
+                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <!-- Inicio: Agregado extra (1) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (1) -->
+
+                                            <!-- Inicio: Agregado extra (2) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (2) -->
+
+                                            <!-- Inicio: Agregado extra (3) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (3) -->
+
+                                            <!-- Inicio: Agregado extra (4) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (4) -->
+
+                                            <!-- Inicio: Agregado extra (5) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (5) -->
+
+                                            <!-- Inicio: Agregado extra (6) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (6) -->
+
+                                            <!-- Inicio: Agregado extra (7) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (7) -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/hamburguesa-producto2.webp" alt="#" class="img-fluid rounded-3">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--FIN Producto 2: Hamburguesa -->
                 </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE AGREGADOS -->
+
+                <!-- Bloque: Listado de Productos Principales de la Categoría -->
+                <div class="row g-4">
+                    <!-- Inicio: Hamburguesas (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso cheddar.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/hamburguesas/hamburguesa_simple.webp" alt="Descripción de la imagen" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Hamburguesas (1) -->
+
+                    <!-- Inicio: Hamburguesas (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Completa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso cheddar, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲28.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/hamburguesas/hamburguesa_completa.webp" alt="Descripción de la imagen" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Hamburguesas (2) -->
+
+                    <!-- Inicio: Hamburguesas (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2"> Pan, carne, queso cheddar, cebolla caramelizada, panceta, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲38.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/hamburguesas/hamburguesa_terra.webp" alt="Descripción de la imagen" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Hamburguesas (3) -->
+
+                </div>
+                
+                <!-- Bloque: SECCIÓN OPCIONAL DE ACOMPAÑAMIENTOS -->
+                
+                <div class="line">
+                    ACOMPAÑA CON
+                </div>
+
+                <div class="row g-4">
+                    <!-- Inicio: Acompañamiento (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Papas fritas</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲12.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/papas_fritas.webp" alt="Papas Fritas" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Acompañamiento (1) -->
+
+                    <!-- Inicio: Acompañamiento (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Mandioca frita</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/mandiocas_fritas.webp" alt="Papas Fritas" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Acompañamiento (2) -->
+                </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE ACOMPAÑAMIENTOS -->
             </div>
         </div>
+        <!-- ================================================================================ -->
+        <!-- FIN: HAMBURGUESAS                                                                -->
+        <!-- ================================================================================ -->
     
-        <!-- ======================= PANEL PIZZAS ======================= -->
-        <div class="tab-pane fade" id="pizzas-pane" role="tabpanel" aria-labelledby="pizzas-tab" tabindex="0">
+        <!-- ================================================================================ -->
+        <!-- INICIO: PIZZAS                                                                   -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="pizzas-pane" role="tabpanel" tabindex="0">
             <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: Pizza -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Pizza Brasileña Especial</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Masa artesanal leudada al estilo paulista, salsa de tomate rústica con toque de ajo, queso muçarela fundido, calabresa brasileña en rodajas finas, cebolla morada caramelizada,aceitunas negras, toque de orégano fresco, terminada con huevo duro en rodajas y pimiento morrón asado.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$60.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/pizza-producto1.webp" alt="#" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FIN Producto 1: Pizza -->
+                <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="accordion-hamburguesas">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                        Agregados extras
+                                    </button>
+                                </h2>
+                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <!-- Inicio: Agregado extra (1) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Queso catupiry</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (1) -->
 
-                    <!-- Producto 2: Pizza -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Pizza margarita</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Base de masa fina y crujiente, salsa de tomate natural al estilo napolitano, mozzarella fresca, tomates en rodajas, hojas de albahaca fresca, y un toque de aceite de oliva extra virgen.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$60.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                            <!-- Inicio: Agregado extra (2) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Queso mozzarella</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (2) -->
+
+                                            <!-- Inicio: Agregado extra (3) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Rodajas de calabresa</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (3) -->
+
+                                            <!-- Inicio: Agregado extra (4) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (4) -->
+
+                                            <!-- Inicio: Agregado extra (5) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo duro</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (5) -->
+
+                                            <!-- Inicio: Agregado extra (6) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa de ajo</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (6) -->
+
+                                            <!-- Inicio: Agregado extra (7) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Aceituna</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (7) -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/pizza-producto2.webp" alt="#" class="img-fluid rounded-3">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 2: Pizza -->
                 </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE AGREGADOS -->
+                
+                <!-- Bloque: Listado de Pizzas Saladas -->
+                <div class="row g-4">
+                    <!-- Inicio: Pizza (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">MARGARITA</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, tomate, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/margarita.webp" alt="Pizza Margarita" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (1) -->
+                
+                    <!-- Inicio: Pizza (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Vegetariana</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, cebolla, morrones, tomate, choclo, palmito, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲40.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/vegetariana.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (2) -->
+
+                    <!-- Inicio: Pizza (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Pollo con Catupiry</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, pollo desmenuzado, catupiry, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/pollo_con_catupiry.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (3) -->
+
+                    <!-- Inicio: Pizza (4) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Palmito</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, palmito, catupiry, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/palmito.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (4) -->
+
+                    <!-- Inicio: Pizza (5) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">4 Quesos</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, queso provolone, parmesano, queso azul, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/4_quesos.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (5) -->
+
+                    <!-- Inicio: Pizza (6) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Al Ajo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, ajo, aceite de oliva, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/al_ajo.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (6) -->
+
+                    <!-- Inicio: Pizza (7) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Portuguesa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, jamón, huevo duro, cebolla, aceituna negra y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/portuguesa.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (7) -->
+
+                    <!-- Inicio: Pizza (8) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Choclo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, choclo, aceituna y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/choclo.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (8) -->
+
+                    <!-- Inicio: Pizza (9) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Napolitana</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, tomate, jamón, aceituna, albahaca y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/napolitana.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (9) -->
+
+                    <!-- Inicio: Pizza (10) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Pepperoni</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, orégano y pepperoni.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/pepperoni.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (10) -->
+
+                    <!-- Inicio: Pizza (11) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, panceta (bacon) y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/terra.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (11) -->
+
+                    <!-- Inicio: Pizza (12) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Calabresa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, calabresa, cebolla (opcional) y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/calabresa.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (12) -->
+
+                    <!-- Inicio: Pizza (13) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Rúcula</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2"> Mozzarella cremosa, jamón crudo, rúcula, tomate cherry y orégano.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/rucula.webp" alt="Pizza Pepperoni" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza (13) -->
+                </div>
+
+                <!-- Bloque: SECCIÓN OPCIONAL DE PIZZAS DULCES -->
+                <div class="line">
+                    PIZZAS DULCES
+                </div>
+            
+                <div class="row g-4">
+                    <!-- Inicio: Pizza Dulce (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sensación</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella, nutella, frutilla y azúcar impalpable.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲50.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/sensacion.webp" alt="Pizza Prestigio" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza Dulce (1) -->
+
+                    <!-- Inicio: Pizza Dulce (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">PRESTIGIO</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2"> Mozzarella, coco rallado, bañado en leche condensada, chocolate negro o blanco.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲50.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/prestigio.webp" alt="Pizza Prestigio" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza Dulce (2) -->
+
+                    <!-- Inicio: Pizza Dulce (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Bônoffee</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella, banana, canela y dulce de leche.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/pizzas/bonoffe.webp" alt="Pizza Prestigio" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Pizza Dulce (3) -->
+                </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE PIZZAS DULCES -->
             </div>
         </div>
-    
-        <!-- ======================= PANEL LOMITO ÁRABE ======================= -->
-        <div class="tab-pane fade" id="lomitoarabe-pane" role="tabpanel" aria-labelledby="lomitoarabe-tab" tabindex="0">
+        <!-- ================================================================================ -->
+        <!-- FIN: PIZZAS                                                                      -->
+        <!-- ================================================================================ -->
+
+        <!-- ================================================================================ -->
+        <!-- INICIO: LOMITO ÁRABE                                                             -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="lomitoarabe-pane" role="tabpanel" tabindex="0">
             <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: Lomito Árabe -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Lomito Árabe Tradicional</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan pita artesanal levemente tostado, finas láminas de carne vacuna marinada con especias árabes, lechuga fresca, tomate en cubos, cebolla morada en juliana, zanahoria rallada, un toque de menta fresca, acompañado de una suave y cremosa salsa de yogur con ajo y limón.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$55.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+            
+                <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="accordion-hamburguesas">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                        Agregados extras
+                                    </button>
+                                </h2>
+                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <!-- Inicio: Agregado extra (1) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (1) -->
+
+                                            <!-- Inicio: Agregado extra (2) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (2) -->
+
+                                            <!-- Inicio: Agregado extra (3) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (3) -->
+
+                                            <!-- Inicio: Agregado extra (4) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (4) -->
+
+                                            <!-- Inicio: Agregado extra (5) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (5) -->
+
+                                            <!-- Inicio: Agregado extra (6) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (6) -->
+
+                                            <!-- Inicio: Agregado extra (7) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (7) -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/lomitoarabe-producto1.webp" alt="#" class="img-fluid rounded-3">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 1: Lomito Árabe -->
+                </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE AGREGADOS -->
+            
+                <!-- Bloque: Listado de Productos Principales de la Categoría -->
+                <div class="row g-4">
+                    <!-- Inicio: Lomito (para replicar) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Normal</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan árabe, carne o pollo, y repollo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/lomito_arabe/normal.webp" alt="Lomito Árabe Normal" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Lomito (para replicar) -->
+                
+                    <!-- Inicio: Lomito (para replicar) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Completo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan árabe, carne o pollo, repollo y queso catupiry.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲28.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/lomito_arabe/completa.webp" alt="Lomito Árabe Completo" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Lomito (para replicar) -->
+                </div>
+                
+                <!-- Bloque: SECCIÓN OPCIONAL DE ACOMPAÑAMIENTOS -->
+                <div class="line">
+                    ACOMPAÑA CON
+                </div>
+            
+                <div class="row g-4">
+                    <!-- Inicio: Acompañamiento (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Papas fritas</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲12.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/papas_fritas.webp" alt="Papas Fritas" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Acompañamiento (1) -->
+
+                    <!-- Inicio: Acompañamiento (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Mandioca frita</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/mandiocas_fritas.webp" alt="Papas Fritas" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Acompañamiento (2) -->
+                </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE ACOMPAÑAMIENTOS -->
+            </div>
+        </div>
+        <!-- ================================================================================ -->
+        <!-- FIN: LOMITO ÁRABE                                                                -->
+        <!-- ================================================================================ -->
+
+        <!-- ================================================================================ -->
+        <!-- INICIO: SÁNDWICHES                                                               -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="sandwiches-pane" role="tabpanel" tabindex="0">
+            <div class="container py-4">
+            
+                <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="accordion" id="accordion-hamburguesas">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                        Agregados extras
+                                    </button>
+                                </h2>
+                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <!-- Inicio: Agregado extra (1) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (1) -->
+
+                                            <!-- Inicio: Agregado extra (2) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (2) -->
+
+                                            <!-- Inicio: Agregado extra (3) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (3) -->
+
+                                            <!-- Inicio: Agregado extra (4) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (4) -->
+
+                                            <!-- Inicio: Agregado extra (5) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (5) -->
+
+                                            <!-- Inicio: Agregado extra (6) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (6) -->
+
+                                            <!-- Inicio: Agregado extra (7) -->
+                                            <div class="col-12">
+                                                <div class="card card-product-bs5 overflow-hidden">
+                                                    <div class="row g-0 align-items-center">
+                                                        <div class="col">
+                                                            <div class="card-body p-2">
+                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin: Agregado extra (7) -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Bloque: SECCIÓN OPCIONAL DE AGREGADOS -->
+            
+                <!-- Bloque: Listado de Productos Principales de la Categoría -->
+                <div class="row g-4">
+                    <!-- Inicio: Sándwich (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, lechuga y tomate.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/simple.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (1) -->
+                
+                    <!-- Inicio: Sándwich (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Completa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/completa.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (2) -->
+
+                    <!-- Inicio: Sándwich (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲42.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/terra.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (3) -->
+
+                    <!-- Inicio: Sándwich (4) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, lechuga y tomate.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/sandwich_simple.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (4) -->
+
+                    <!-- Inicio: Sándwich (5) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Completo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/sandwich_completo.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (5) -->
+
+                    <!-- Inicio: Sándwich (6) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲42.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/sandwiches/sandwich_terra.webp" alt="Sándwich" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Sándwich (6) -->
+                </div>
+
+            </div>
+        </div>
+        <!-- ================================================================================ -->
+        <!-- FIN: SÁNDWICHES                                                                  -->
+        <!-- ================================================================================ -->
+
+        <!-- ================================================================================ -->
+        <!-- INICIO: PARA PICAR                                                               -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="parapicar-pane" role="tabpanel" tabindex="0">
+            <div class="container py-4">
+                <div class="row g-4">
+                    <!-- Inicio: para picar (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Papas fritas</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲12.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/papas_fritas.webp" alt="Descripción del plato" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: para picar (1) -->
+
+                    <!-- Inicio: para picar (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Mandioca Frita</h3>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/acompaña_con/mandiocas_fritas.webp" alt="Descripción del plato" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: para picar (2) -->
                     
-                    <!-- Producto 2: Lomito Árabe -->
+                    <!-- Inicio: para picar (3) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Lomito Árabe Especial</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan pita artesanal dorado a la plancha, lomo vacuno premium marinado con especias árabes y oliva extra virgen, queso muzarella fundido, huevo a la plancha, jamón ahumado, lechuga crocante, tomate en rodajas frescas, cebolla morada caramelizada</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$55.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Frango a Passarinho</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Incluye 8 piezas de pollo con papas fritas o mandiocas fritas.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/lomitoarabe-producto2.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/patio_terra/para_picar/frango_a_passarinho.webp" alt="Descripción de la imagen del piqueo" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 2: Lomito Árabe -->
-                </div>
-            </div>
-        </div>
-    
-        <!-- ======================= PANEL SANDWICHES ======================= -->
-        <div class="tab-pane fade" id="sandwiches-pane" role="tabpanel" aria-labelledby="sandwiches-tab" tabindex="0">
-            <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: Sandwich -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich de Lomito Paraguayo</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">pan mignon, lomito de carne vacuna, queso Paraguay derretido, jamón cocido, huevo frito, lechuga crespa, tomate, cebolla salteada, mayonesa casera. <br>Opcional: papas fritas dentro o al costado.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$40.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/sandwich-producto1.webp" alt="#" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FIN Producto 1: Sandwich -->
+                    <!-- Fin: para picar (3) -->
 
-                    <!-- Producto 2: Sandwich -->
+                    <!-- Inicio: para picar (4) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich de Lomito Especial</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">pan mignon artesanal, lomito de carne vacuna marinada, queso Paraguay fundido, jamón ahumado, huevo a la plancha, lechuga crespa, tomate, cebolla caramelizada, papas fritas crocantes dentro del pan, salsa de ajo con toque de mostaza dulce.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$40.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Calabresa con Fritas</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Papas fritas crujientes, rodajas de calabresa y cebolla salteada.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/sandwich-producto2.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/patio_terra/para_picar/calabresa_con_fritas.webp" alt="Descripción de la imagen del piqueo" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 2: Sandwich -->
+                    <!-- Fin: para picar (4) -->
                 </div>
             </div>
         </div>
-    
-        <!-- ======================= PANEL PAPAS FRITAS ======================= -->
-        <div class="tab-pane fade" id="papasfritas-pane" role="tabpanel" aria-labelledby="papasfritas-tab" tabindex="0">
-            <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: Papas fritas -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Papas con Queso Cheddar</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">papas fritas crujientes, queso cheddar fundido, toque de crema, cebollita de verde o picada</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$15.000</p>
-                                        <small class="product-note-bs5 text-muted">Tamaños Grande, mediano y pequeño</small>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/papasfritas-producto1.webp" alt="#" class="img-fluid rounded-3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FIN Producto 1: Papas fritas -->
+        <!-- ================================================================================ -->
+        <!-- FIN: PARA PICAR"                                                                 -->
+        <!-- ================================================================================ -->
 
-                    <!-- Producto 2: Papas fritas -->
+    
+        <!-- ================================================================================ -->
+        <!-- INICIO: BEBIDAS                                                                  -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" tabindex="0">
+            <div class="container py-4">
+                <div class="row g-4">
+
+                    <!-- Inicio: Bebida (1) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Papas Especiales de la Casa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">papas rústicas con cáscara, queso cheddar fundido, panceta crocante, crema ácida, cebollita de verdeo, salsa barbacoa artesanal</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$15.000</p>
-                                        <small class="product-note-bs5 text-muted">Tamaños Grande, mediano y pequeño</small>
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Agua</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Con o sin gas.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/papasfritas-producto2.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/buffet/bebidas/refrescos/agua.webp" alt="Agua" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 2: Papas fritas -->
-                </div>
-            </div>
-        </div>
-    
-        <!-- ======================= PANEL BEBIDAS ======================= -->
-        <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" aria-labelledby="bebidas-tab" tabindex="0">
-            <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Producto 1: refresco -->
+                    <!-- Fin: Bebida (1) -->
+                
+                    <!-- Inicio: Bebida (2) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Jugos Naturales</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Durazno, Piña, Naranja, Limón.<br>Jarra Grande / Jarra Pequeña / Vaso</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000 / ₲25.000 / ₲13.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/buffet/bebidas/jugos/jugos_naturales.webp" alt="Jugos Naturales" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Bebida (2) -->
+                
+                    <!-- Inicio: Bebida (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Antarctica</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Normal y Zero.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/buffet/bebidas/refrescos/antarctica.webp" alt="Antarctica" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Bebida (3) -->
+                
+                    <!-- Inicio: Bebida (4) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
                                         <h3 class="product-title-bs5 h5 mb-1">Coca Cola</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                        <p class="product-description-bs5 small text-muted mb-2">Normal y Zero. (500ml / 250ml)</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000 / ₲6.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/bebidas-producto1.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/buffet/bebidas/refrescos/coca_cola.webp" alt="Coca Cola" class="img-fluid">
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 1: refresco -->
-
-                    <!-- Producto 2: refresco -->
+                    <!-- Fin: Bebida (4) -->
+                
+                    <!-- Inicio: Bebida (5) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Fanta</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Naranja, Guaraná, Piña. (500ml / 250ml)</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000 / ₲6.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/buffet/bebidas/refrescos/fanta.webp" alt="Fanta" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Bebida (5) -->
+                
+                    <!-- Inicio: Bebida (6) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
                                         <h3 class="product-title-bs5 h5 mb-1">Sprite</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Gaseosa personal o grande</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                        <p class="product-description-bs5 small text-muted mb-2">Normal y Zero. (500ml / 250ml)</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000 / ₲6.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/bebidas-producto2.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/buffet/bebidas/refrescos/sprite.webp" alt="Sprite" class="img-fluid">
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 2: refresco -->
-
-                    <!-- Producto 1: Cóctel -->
+                    <!-- Fin: Bebida (6) -->
+                
+                    <!-- Inicio: Bebida (7) -->
                     <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
                                 <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sexo en la playa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, licor de durazno (peach schnapps), jugo de naranja, jugo de arándano (cranberry).</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Schweppes</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Citrus y Tónica.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000 / ₲12.000</p>
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="assets/images/bebidas-producto3.webp" alt="#" class="img-fluid rounded-3">
+                                    <img src="assets/images/buffet/bebidas/refrescos/schweppes.webp" alt="Schweppes" class="img-fluid">
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                    <!-- FIN Producto 1: Cóctel -->
-
-                    <!-- Producto 2: Cóctel -->
-                    <div class="col-12">
-                        <div class="card card-product-bs5 overflow-hidden p-2">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-7">
-                                    <div class="card-body p-2">
-                                        <h3 class="product-title-bs5 h5 mb-1">Moscow Mule</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, ginger beer (cerveza de jengibre), jugo de lima fresca, hielo.</p>
-                                        <p class="product-price-bs5 h4 fw-bolder mb-0">$35.000</p>
-                                        <small class="product-note-bs5 text-muted">Precio incluye IVA</small>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/images/bebidas-producto4.webp" alt="#" class="img-fluid rounded-3">
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    <!-- FIN Producto 2: Cóctel -->
+                    <!-- Fin: Bebida (7) -->
                 </div>
             </div>
         </div>
-    
+        <!-- ================================================================================ -->
+        <!-- FIN: BEBIDAS                                                                     -->
+        <!-- ================================================================================ -->
+        
+        <!-- ================================================================================ -->
+        <!-- INICIO: CÓCTELES                                                                 -->
+        <!-- ================================================================================ -->
+        <div class="tab-pane fade" id="cocteles-pane" role="tabpanel" tabindex="0">
+            <div class="container py-4">
+                <div class="row g-4">
+                    <!-- Inicio: Cóctel (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Aperol</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Aperol, prosecco, soda, hielo y una rodaja de naranja.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/aperol.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (1) -->
+                    
+                    <!-- Inicio: Cóctel (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Gin Tonic</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Ginebra, tónica, hielo y una rodaja de limón o pepino.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/gin_tonic.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (2) -->
+
+                    <!-- Inicio: Cóctel (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Caipiroska</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, lima, azúcar y hielo picado.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/caipiroska.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (3) -->
+
+                    <!-- Inicio: Cóctel (4) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Caipirinha</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Cachaça, lima, azúcar y hielo picado.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/caipirinha.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (4) -->
+
+                    <!-- Inicio: Cóctel (5) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Fernet Cola</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Fernet, refresco de cola y hielo.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/caipirinha.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (5) -->
+
+                    <!-- Inicio: Cóctel (6) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Sangría</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Vino tinto, refresco de naranja o limón, frutas picadas (como naranja, manzana, limón, durazno) y, opcionalmente, un toque de licor.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/sangria.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (6) -->
+
+                    <!-- Inicio: Cóctel (7) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Vinos</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2"> Alma Mora Norma, Gran Hacienda, Terra Noble Car Alma, Mora Black Norton, Alma Mora Black, Carmen Synal, Benjamín Malbec, Casa Sibra Malbec, Male Gascon Malbec, Copa de Vino.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲85k / ₲80k / ₲70k / ₲20k</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/sangria.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (7) -->
+
+                    <!-- Inicio: Cóctel (8) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Cervezas</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Heineken (650 ml), Cerveza Miller, Corona (650 ml), Heineken 0 (300 ml), Munich (650 ml)</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲25.000 / ₲18.000 / ₲12.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/sangria.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (8) -->
+
+                    <!-- Inicio: Cóctel (9) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Chop</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Chop Munich 360, Chop Munich 500, 2x1 Chop 360.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲25.000 / ₲20.000 / ₲15.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/patio_terra/cocteles/sangria.webp" alt="Cocteles" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin: Cóctel (9) -->
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- ================================================================================ -->
+    <!-- FIN: CÓCTELES                                                                    -->
+    <!-- ================================================================================ -->
 
     <!-- =================================================================
-    FOOTER - PIE DE PÁGINA
+        BLOQUE 7: FOOTER (PIE DE PÁGINA)
     ================================================================== -->
     <footer class="footer-section text-center">
         <div class="container">
             <small class="d-block copyright-text">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
-                
             <small class="d-block credit-text">
                 Menú digital desarrollado por 
                 <a href="#" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
@@ -564,14 +1746,11 @@
         </div>
     </footer>
 
-
-
-    <!-- ============== BOOTSTRAP 5 JS ============== -->
+    <!-- =================================================================
+        BLOQUE 8: SCRIPTS JAVASCRIPT (NO TOCAR)
+    ================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <!-- ============== SCRIPT PERSONALIZADO (SI ES NECESARIO) ============== -->
     <script src="js/script.js" defer></script>
 
 </body>
-
 </html>
