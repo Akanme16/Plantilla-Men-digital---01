@@ -920,3 +920,47 @@ html {
 .buffet-kilo-option strong {
     font-size: 1rem;
 }
+
+/* =================================================================
+    20. ESTILO OPCIONAL PARA CARD CON LISTA DE PRECIOS (VERSIÓN REFINADA)
+   ================================================================= */
+
+/* Contenedor de la lista dentro de la card */
+.card-price-list .price-list-items {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.75rem; /* Espacio reducido después del título */
+    margin-bottom: 0;
+}
+
+/* Cada fila (nombre y precio) de la lista */
+.card-price-list .price-list-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0; /* Espaciado vertical entre items */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-price-list .price-list-items li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Estilo para el nombre del producto en la lista */
+.card-price-list .item-name {
+    /* AJUSTE: Usa el mismo color y tamaño que la descripción en otras cards */
+    color: #6c757d; /* Hereda el color de .product-description-bs5 */
+    font-size: 0.9rem; /* Un tamaño sutil y elegante */
+    line-height: 1.4;
+}
+
+/* Estilo para el precio en la lista */
+.card-price-list .item-price {
+    /* AJUSTE: Usa el mismo color y peso que los precios en otras cards */
+    color: var(--color-accent-gold); /* Hereda el color de .product-price-bs5 */
+    font-weight: bolder; /* Hereda el peso de .fw-bolder */
+    font-size: 1.1rem; /* Tamaño legible y destacado */
+    white-space: nowrap;
+    padding-left: 1rem;
+}

@@ -122,7 +122,7 @@
 <div class="container my-4">
 
     <!-- 1. NAVEGACIÓN DEL MENÚ (TABS) -->
-    <section class="menu-triggers" id="menu-completo-tabs" role="tablist">
+    <section class="menu-triggers mb-5" id="menu-completo-tabs" role="tablist">
         <!-- Barra deslizable de categorías -->
         <div class="menu-dias-wrapper mb-5">
             <h2 class="text-center mb-4">Menú</h2>
@@ -154,12 +154,11 @@
     
         <!-- Cards para categorías fijas -->
         <div class="menu-fijo-wrapper mt-5">
-            <!-- Fila 1: Para las dos cards cuadradas -->
             <div class="row g-3">
                 <!-- Card Bebidas -->
                 <div class="col-6">
                     <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
-                        <img src="assets/images/bebidas.webp" alt="Categoría de Bebidas" class="menu-item-img" loading="lazy">
+                        <img src="assets/images/buffet/card_img/bebidas_card.webp" alt="Categoría de Bebidas" class="menu-item-img" loading="lazy">
                         <div class="menu-item-label">
                             <h3 class="menu-item-title">Bebidas</h3>
                         </div>
@@ -168,19 +167,15 @@
                 <!-- Card Postres -->
                 <div class="col-6">
                     <a href="#" class="nav-link menu-item-card square-card text-decoration-none" id="postres-tab" data-bs-toggle="tab" data-bs-target="#postres-pane" role="tab">
-                        <img src="assets/images/postres.webp" alt="Categoría de Postres" class="menu-item-img" loading="lazy">
+                        <img src="assets/images/buffet/card_img/postres_card.webp" alt="Categoría de Postres" class="menu-item-img" loading="lazy">
                         <div class="menu-item-label">
                             <h3 class="menu-item-title">Postres</h3>
                         </div>
                     </a>
                 </div>
-            </div>
-
-            <!-- Fila 2: Para la nueva card horizontal de Café y Té -->
-            <div class="row g-3 mt-3"> <!-- mt-3 es un pequeño margen para separar las filas -->
+                <!-- Card Café y Té (Ahora dentro de la misma fila) -->
                 <div class="col-12">
                     <a href="#" class="nav-link menu-item-card text-decoration-none" id="cafeyte-tab" data-bs-toggle="tab" data-bs-target="#cafeyte-pane" role="tab">
-                        <!-- Asegúrate de tener una imagen en esta ruta -->
                         <img src="assets/images/buffet/card_img/cafe_y_te.webp" alt="Categoría de Café y Té" class="menu-item-img large-img" loading="lazy">
                         <div class="menu-item-label">
                             <h3 class="menu-item-title">Café y Té</h3>
@@ -1260,141 +1255,172 @@
         <!-- Panel para BEBIDAS -->
         <div class="tab-pane fade" id="bebidas-pane" role="tabpanel" tabindex="0">
             <div class="row g-4">
-                <!-- Inicio producto (1) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/agua.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Agua
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Con o sin gas.
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000
-                            </p></div>
+                <!-- Inicio: Bebida (1) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Agua</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Con o sin gas.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/buffet/bebidas/refrescos/agua.webp" alt="Agua" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (1) Bebidas -->
+                    </div>
+                    <!-- Fin: Bebida (1) -->
                 
-                <!-- Inicio producto (2) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/jugos/jugos_naturales.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Jugos Naturales
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Durazno, Piña, Naranja, Limón
-                                <br>
-                                Jarra grande - Jarra pequeña - Vaso
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲35.000 / ₲25.000 / ₲13.000
-                            </p></div>
+                    <!-- Inicio: Bebida (2) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden card-price-list">
+                            <img src="assets/images/patio_terra/bebidas/jugos/jugos_naturales.webp" class="card-img-top" alt="bebidas">
+                            
+                            <div class="card-body p-3">
+                                <h3 class="product-title-bs5 h5 mb-2">
+                                    Jugos Naturales
+                                </h3>
+                                <p class="product-description-bs5 small text-muted mb-2">Durazno, Piña, Naranja, Limón.</p>
+                                <ul class="price-list-items">
+                                    <li>
+                                        <span class="item-name">Jarra Grande</span>
+                                        <span class="item-price">₲35.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">Jarra Pequeña</span>
+                                        <span class="item-price">₲25.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">Vaso</span>
+                                        <span class="item-price">₲13.000</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (2) Bebidas -->
-
-                <!-- Inicio producto (3) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/antarctica.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Antarctica
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Normal y Zero.
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000
-                            </p></div>
+                    </div>
+                    <!-- Fin: Bebida (2) -->
+                    
+                    <!-- Inicio: Bebida (3) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden card-price-list">
+                            <img src="assets/images/patio_terra/bebidas/refrescos/antarctica.webp" class="card-img-top" alt="bebidas">
+                            
+                            <div class="card-body p-3">
+                                <h3 class="product-title-bs5 h5 mb-2">
+                                    Antarctica
+                                </h3>
+                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero</p>
+                                <ul class="price-list-items">
+                                    <li>
+                                        <span class="item-name">500ml</span>
+                                        <span class="item-price">₲10.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">250ml</span>
+                                        <span class="item-price">₲6.000</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (3) Bebidas -->
+                    </div>
+                    <!-- Fin: Bebida (3) -->
 
-                <!-- Inicio producto (4) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/coca_cola.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Coca Cola
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Normal y Zero. (500ml - 250ml)
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000 / ₲6.000
-                            </p></div>
+                    <!-- Inicio: Bebida (4) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden card-price-list">
+                            <img src="assets/images/patio_terra/bebidas/refrescos/coca_cola.webp" class="card-img-top" alt="bebidas">
+                            
+                            <div class="card-body p-3">
+                                <h3 class="product-title-bs5 h5 mb-2">
+                                    Coca Cola
+                                </h3>
+                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero</p>
+                                <ul class="price-list-items">
+                                    <li>
+                                        <span class="item-name">500ml</span>
+                                        <span class="item-price">₲10.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">250ml</span>
+                                        <span class="item-price">₲6.000</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (4) Bebidas -->
-
-                <!-- Inicio producto (5) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/fanta.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Fanta
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Naranja, Guaraná, Piña. (500ml - 250ml)
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000 / ₲6.000
-                            </p></div>
+                    </div>
+                    <!-- Fin: Bebida (4) -->
+                    
+                    <!-- Inicio: Bebida (5) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden card-price-list">
+                            <img src="assets/images/patio_terra/bebidas/refrescos/fanta.webp" class="card-img-top" alt="bebidas">
+                            
+                            <div class="card-body p-3">
+                                <h3 class="product-title-bs5 h5 mb-2">
+                                    Fanta
+                                </h3>
+                                <p class="product-description-bs5 small text-muted mb-2">Naranja, Guaraná, Piña.</p>
+                                <ul class="price-list-items">
+                                    <li>
+                                        <span class="item-name">500ml</span>
+                                        <span class="item-price">₲10.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">250ml</span>
+                                        <span class="item-price">₲6.000</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (5) Bebidas -->
-
-                <!-- Inicio producto (6) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/sprite.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Sprite
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Normal y Zero. (500ml - 250ml)
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000 / ₲6.000
-                            </p></div>
+                    </div>
+                    <!-- Fin: Bebida (5) -->
+                    
+                    <!-- Inicio: Bebida (6) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden card-price-list">
+                            <img src="assets/images/patio_terra/bebidas/refrescos/sprite.webp" class="card-img-top" alt="bebidas">
+                            
+                            <div class="card-body p-3">
+                                <h3 class="product-title-bs5 h5 mb-2">
+                                    Sprite
+                                </h3>
+                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero.</p>
+                                <ul class="price-list-items">
+                                    <li>
+                                        <span class="item-name">500ml</span>
+                                        <span class="item-price">₲10.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="item-name">250ml</span>
+                                        <span class="item-price">₲6.000</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (6) Bebidas -->
-
-                <!-- Inicio producto (7) Bebidas -->
-                <div class="col-12">
-                    <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/bebidas/refrescos/schweppes.webp" class="card-img-top" alt="Descripción de la imagen del plato">
-                        
-                        <div class="card-body p-3">
-                            <h3 class="product-title-bs5 h5 mb-2">
-                                Schweppes
-                            </h3>
-                            <p class="product-description-bs5 small text-muted mb-3">
-                                Citrus y Tónica.
-                            </p>
-                            <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲10.000 / ₲12.000
-                            </p></div>
+                    </div>
+                    <!-- Fin: Bebida (6) -->
+                
+                    <!-- Inicio: Bebida (7) -->
+                    <div class="col-12">
+                        <div class="card card-product-bs5 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-7">
+                                    <div class="card-body p-3">
+                                        <h3 class="product-title-bs5 h5 mb-1">Schweppes</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2">Citrus y Tónica.</p>
+                                        <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <img src="assets/images/buffet/bebidas/refrescos/schweppes.webp" alt="Schweppes" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
-                </div>
-                <!-- Fin producto (7) Bebidas -->
-
+                    </div>
+                    <!-- Fin: Bebida (7) -->
             </div>
         </div>
         
@@ -1413,6 +1439,7 @@
                             <p class="product-description-bs5 small text-muted mb-3">
                                 Clásico flan de huevo con caramelo, suave y cremoso.
                             </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">₲16.000</p>
                         </div>
                     </div>
                 </div>
@@ -1430,6 +1457,7 @@
                             <p class="product-description-bs5 small text-muted mb-3">
                                 Postre clásico de flan cremoso acompañado de una bola de helado.
                             </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
                         </div>
                     </div>
                 </div>
@@ -1438,15 +1466,16 @@
                 <!-- Inicio producto (3) Postres -->
                 <div class="col-12">
                     <div class="card card-product-bs5 overflow-hidden">
-                        <img src="assets/images/buffet/postres/crema_de_leche.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        <img src="assets/images/buffet/postres/arroz_con_leche.webp" class="card-img-top" alt="Descripción de la imagen del plato">
                         
                         <div class="card-body p-3">
                             <h3 class="product-title-bs5 h5 mb-2">
-                                Crema de Leche
+                                Arroz con leche
                             </h3>
                             <p class="product-description-bs5 small text-muted mb-3">
-                                Postre simple y ligero a base de leche azucarada y espesa.
+                                Postre tradicional de arroz cremoso con leche, aromatizado con canela y un toque de vainilla.
                             </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">₲16.000</p>
                         </div>
                     </div>
                 </div>
@@ -1464,12 +1493,30 @@
                             <p class="product-description-bs5 small text-muted mb-3">
                                 Postre brasileño cremoso elaborado con pulpa de maracuyá, leche condensada y crema.
                             </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">₲16.000</p>
                         </div>
                     </div>
                 </div>
                 <!-- Fin producto (4) Postres -->
 
-                
+                <!-- Inicio producto (5) Postres -->
+                <div class="col-12">
+                    <div class="card card-product-bs5 overflow-hidden">
+                        <img src="assets/images/buffet/postres/helado_en_copa_americana.webp" class="card-img-top" alt="Descripción de la imagen del plato">
+                        
+                        <div class="card-body p-3">
+                            <h3 class="product-title-bs5 h5 mb-2">
+                                Helado en Copa Americana
+                            </h3>
+                            <p class="product-description-bs5 small text-muted mb-3">
+                                
+                            </p>
+                            <p class="product-price-bs5 h4 fw-bolder mb-0">₲16.000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin producto (5) Postres -->
+
             </div>
         </div>
 
@@ -1487,10 +1534,10 @@
                                 Café
                             </h3>
                             <p class="product-description-bs5 small text-muted mb-3">
-                                Expresso Americano, Café con Leche, Expresso Chico.
+                                Espresso Americano, Café con Leche
                             </p>
                             <p class="product-price-bs5 h4 fw-bolder mb-0">
-                                ₲16.000 / ₲10.000
+                                ₲16.000
                             </p>
                         </div>
                     </div>
@@ -1538,7 +1585,7 @@
             <small class="d-block copyright-text">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
             <small class="d-block credit-text">
                 Menú digital desarrollado por 
-                <a href="#" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
+                <a href="https://xmoss-service.com" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
             </small>
         </div>
     </footer>
