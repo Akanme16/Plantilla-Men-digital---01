@@ -1140,10 +1140,10 @@ function applyTranslations() {
     document.querySelectorAll('[data-translate-key]').forEach(element => {
         const key = element.getAttribute('data-translate-key');
         if (pageTranslations[key] !== undefined) {
-             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
+            if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
                 element.setAttribute('content', pageTranslations[key]);
             } else if (element.hasAttribute('aria-label')) {
-                 element.setAttribute('aria-label', pageTranslations[key]);
+                element.setAttribute('aria-label', pageTranslations[key]);
             } else {
                 element.innerHTML = pageTranslations[key];
             }
@@ -1187,50 +1187,8 @@ function applyTranslations() {
     });
 }
 
-/**
- * Configura la lógica de los menús con pestañas (Tabs).
- */
-function setupMenuTabs() {
-    const pageKey = document.body.getAttribute('data-page');
-    // Solo ejecutar en las páginas que tienen este sistema de menú
-    if (pageKey !== 'terraBrasil' && pageKey !== 'patioTerra') return;
-
-    const menuTabsSection = document.getElementById('menu-completo-tabs');
-    const menuContent = document.getElementById('menuTabContent');
-    const allTabs = document.querySelectorAll('[data-bs-toggle="tab"]');
-    const backButton = document.querySelector('.fixed-home-btn');
-
-    if (!menuTabsSection || !menuContent) return;
-    
-    // Ocultar el contenido de los platos por defecto
-    menuContent.style.display = 'none';
-
-    allTabs.forEach(tab => {
-        tab.addEventListener('click', function(event) {
-            event.preventDefault();
-            menuTabsSection.style.display = 'none';
-            menuContent.style.display = 'block';
-            const bootstrapTab = new bootstrap.Tab(this);
-            bootstrapTab.show();
-        });
-    });
-
-    if (backButton) {
-        backButton.addEventListener('click', function(event) {
-            if (menuContent.style.display === 'block') {
-                event.preventDefault();
-                menuContent.style.display = 'none';
-                menuTabsSection.style.display = 'block';
-                const activeTab = menuContent.querySelector('.tab-pane.active');
-                if (activeTab) activeTab.classList.remove('active', 'show');
-            }
-        });
-    }
-}
-
 // --- EVENTO PRINCIPAL ---
 // Se ejecuta cuando el HTML ha cargado completamente.
 document.addEventListener('DOMContentLoaded', () => {
     applyTranslations();
-    setupMenuTabs();
 });
