@@ -9,6 +9,7 @@
 /* Se definen las variables con los colores corporativos para fácil acceso */
 :root {
     --color-primary-red: #8C0000;
+    --color-primary-select: #9e0000;
     --color-accent-gold: #FEB62B;
     --color-background-cream: #FFF8F0;
     --color-background-light-gray: #F2F2F2;
@@ -117,43 +118,24 @@ body {
     color: white;
     font-weight: 900;
     font-size: 1.5rem;
-    padding: 0.1rem 1.5rem; /* Padding horizontal ajustado */
+    padding: 0.1rem 1rem; /* Padding horizontal ajustado */
     border-radius: 50px;
     line-height: 1.2;
 }
 
-/* --- ESTILOS PARA EL BOTÓN DE DESCUENTO --- */
-/* Contenedor principal del botón de descuento */
-.info-card > a {
-    gap: 0.5rem; /* Espacio entre el texto de la izquierda y el de la derecha */
+/* --- ESTILOS PARA EL BOTÓN DE REDES SOCIALES --- */
+.social-icons-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem; /* Espacio horizontal entre los iconos */
+    background-color: var(--color-text-orange);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
 }
 
-.discount-day-final {
-    font-weight: 900;
-    font-size: 1.1rem;
-    color: var(--color-text-dark);
-    line-height: 1;
-    text-align: right;
-}
-.discount-subtitle-final {
-    font-weight: 700;
-    font-size: 0.7rem;
-    color: #555;
-    letter-spacing: 1px;
-    line-height: 1;
-    text-align: right;
-}
-.discount-percentage-final {
-    font-weight: 800;
-    font-size: 3.2rem; /* Tamaño base ligeramente reducido */
-    color: var(--color-text-orange);
-    line-height: 1;
-}
-.discount-product-final {
-    font-weight: 700;
-    font-size: 0.7rem;
-    color: #555;
-    letter-spacing: 1px;
+.social-icon {
+    font-size: 1.8rem; /* Controla el tamaño de los iconos */
+    color: white;    /* Asegura que sean blancos */
 }
 
 /* =================================================================
@@ -178,18 +160,13 @@ body {
         padding: 0.1rem 1rem;
     }
 
-    /* Reducimos los textos del botón de DESCUENTO */
-    .discount-day-final {
-        font-size: 0.8rem;
+     /* Reducimos los iconos del botón de REDES SOCIALES */
+    .social-icons-wrapper {
+        gap: 1rem;
+        padding: 0.4rem 1.2rem;
     }
-    .discount-subtitle-final {
-        font-size: 0.5rem;
-    }
-    .discount-percentage-final {
-        font-size: 2.2rem; /* Reducción significativa para que no se desborde */
-    }
-    .discount-product-final {
-        font-size: 0.5rem;
+    .social-icon {
+        font-size: 1.5rem; /* Tamaño más pequeño para móviles */
     }
 }
 
@@ -963,4 +940,159 @@ html {
     font-size: 1.1rem; /* Tamaño legible y destacado */
     white-space: nowrap;
     padding-left: 1rem;
+}
+
+/* =================================================================
+    21. PÁGINA DE REDES SOCIALES (SOCIAL.HTML)
+   ================================================================= */
+/* --- Estilo base del body --- */
+.social-page {
+    /* ¡IMPORTANTE! Usa la ruta correcta a tu imagen de fondo. */
+    background-image: url('../assets/background/background-social.webp');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Capa oscura sobre el fondo --- */
+.social-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* --- Contenedor principal para que el contenido esté sobre la capa oscura --- */
+.social-content-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Título "TERRA BRASIL" --- */
+.social-title {
+    font-weight: 700;
+    margin-bottom: 3.5rem; 
+}
+
+/* --- Contenedor de los iconos de Instagram y WhatsApp --- */
+.social-links-container {
+    display: flex;
+    gap: 3rem; /* Espacio entre los dos iconos */
+    justify-content: center;
+}
+/* Estilo para los iconos grandes */
+.social-link i.social-icon-large {
+    font-size: 70px;  /* Controla el tamaño del icono */
+    color: white;     /* Asegura que el icono sea blanco */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-link:hover svg.social-icon-large {
+    transform: scale(1.1);
+}
+
+/* --- Texto inferior "¡Visita nuestras redes sociales!" --- */
+.social-tagline {
+    /* Espacio reducido para que esté más cerca de los iconos */
+    margin-top: 2.5rem; 
+    font-size: 1rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* --- Estilos para el MODAL --- */
+.social-modal-content {
+    background-color: rgba(18, 18, 18, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    color: white;
+}
+.social-modal-content .modal-header {
+    border-bottom: none;
+    padding: 0.8rem;
+}
+.social-modal-content .btn-close {
+    background-color: white;
+    border-radius: 50%;
+}
+.social-modal-content .modal-body {
+    padding: 1rem 1.5rem 2rem;
+}
+.modal-option a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+.modal-option a:hover {
+    opacity: 0.8;
+}
+.modal-option i {
+    font-size: 50px; /* Usamos font-size para controlar el tamaño del icono */
+}
+
+/* =================================================================
+    22. ESTILOS PARA EL BOTÓN DE IDIOMA (INDEX.HTML)
+   ================================================================= */
+
+/* Selector para el botón específico por su ID */
+#languageDropdown {
+    /* 1. Dimensiones para hacerlo un círculo perfecto */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Esto crea la forma circular */
+    
+    /* 2. Borde y color de fondo */
+    border: 2px solid white;
+    background-color: var(--color-primary-red); /* Fondo transparente */
+    
+    /* 3. Quitamos el padding y usamos flexbox para centrar el texto */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 4. Aseguramos que el texto y el ícono sean blancos */
+    color: white; 
+}
+
+/* Oculta la flecha ▼ del menú desplegable de Bootstrap */
+#languageDropdown::after {
+    display: none;
+}
+
+/* =================================================================
+    23. AJUSTES PARA EL MENÚ DE IDIOMA
+   ================================================================= */
+
+/* 1. Contenedor del selector de idioma */
+.language-selector-wrapper {
+    /* Esto asegura que el contenedor y su menú estén por encima de todo lo demás */
+    z-index: 1050; 
+}
+
+/* 2. Estilos para el menú desplegable */
+.language-selector-wrapper .dropdown-menu {
+    /* Anulamos el ancho mínimo que le pone Bootstrap */
+    min-width: auto; 
+    /* Hacemos que el ancho se ajuste al contenido (ES, EN, PT) */
+    width: fit-content; 
+}
+
+/* 3. (Opcional) Centramos el texto de las opciones para que se vea mejor */
+.language-selector-wrapper .dropdown-item {
+    text-align: center;
 }

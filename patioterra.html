@@ -7,11 +7,11 @@
     ================================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre el menú digital de Patio Terra. Hamburguesas, pizzas, lomitos y más.">
+    <meta name="description" content="Descubre el menú digital de Patio Terra. Hamburguesas, pizzas, lomitos y más." data-translate-key="meta_description">
     <meta name="keywords" content="Patio Terra, restaurante, menú digital, hamburguesas, pizzas, lomitos, delivery">
     <meta name="author" content="Restaurante PATIO TERRA">
 
-    <title>Menú Digital - Patio Terra</title>
+    <title data-translate-key="page_title">Menú Digital - Patio Terra</title>
 
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="menu-lomiteria">
+<body class="menu-lomiteria" data-page="patioTerra">
     <!-- =================================================================
         BLOQUE 2: BOTÓN FIJO PARA VOLVER A LA PÁGINA DE INICIO (index.html)
     ================================================================== -->
-    <a href="index.html" class="fixed-home-btn" aria-label="Volver a la página principal">
+    <a href="index.html" class="fixed-home-btn" aria-label="Volver a la página principal" data-translate-key="back_to_home">
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
     </a>
 
@@ -33,6 +33,22 @@
         BLOQUE 3: HEADER (CONTIENE EL BANNER SUPERIOR, BARRA ROJA Y LOGO)
     ================================================================== -->
     <header class="header-section position-relative">
+        <!-- ============== NUEVO: BOTÓN DE CAMBIO DE IDIOMA ============== -->
+        <div class="position-absolute top-0 end-0 p-3 language-selector-wrapper">
+            <div class="dropdown">
+                <!-- El botón que activa el menú desplegable. data-bs-toggle="dropdown" es esencial. -->
+                <button class="btn btn-dark dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="language-btn-text">ES</span>
+                </button>
+                <!-- La lista de opciones que se mostrará al hacer clic. -->
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li> <!-- Opción Español -->
+                    <li><a class="dropdown-item" href="#" data-lang="en">English</a></li> <!-- Opción Inglés -->
+                    <li><a class="dropdown-item" href="#" data-lang="pt">Portugués</a></li> <!-- Opción Portugués -->
+                </ul>
+            </div>
+        </div>
+        <!-- ============== FIN DEL BOTÓN DE CAMBIO DE IDIOMA ============== -->
         <div class="main-banner"></div>
         <div class="banner-space"></div>
         <div class="logo-wrapper"> 
@@ -50,7 +66,7 @@
         <section class="title-section text-center">
             <div class="container">
                 <h1 class="main-title display-4 fw-bolder text-dark">Patio Terra</h1>
-                <p class="main-tagline lead text-muted">Descubre un mundo de sabores auténticos.</p>
+                <p class="main-tagline lead text-muted" data-translate-key="main_tagline">Descubre un mundo de sabores auténticos.</p>
             </div>
         </section>
         
@@ -76,14 +92,14 @@
         Cada '<a>' funciona como un botón que activa su panel de contenido correspondiente más abajo.
     ================================================================== -->
     <section class="menu-items-section container my-4" id="seccion-menu-tabs" role="tablist">
-        <h2 class="text-center mb-4">Menú</h2>
+        <h2 class="text-center mb-4" data-translate-key="menu_title">Menú</h2>
     
         <div class="row g-3">
             <!-- Botón Categoría Hamburguesas -->
             <div class="col-6">
                 <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#hamburguesas-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/hamburguesas_card.webp" alt="Categoría de Hamburguesas" class="menu-item-img">
-                    <div class="menu-item-label"><h3 class="menu-item-title">Hamburguesa</h3></div>
+                    <div class="menu-item-label"><h3 class="menu-item-title" data-translate-key="category_burgers">Hamburguesa</h3></div>
                 </a>
             </div>
         
@@ -91,7 +107,7 @@
             <div class="col-6">
                 <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#pizzas-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/pizzas_card.webp" alt="Categoría de Pizzas" class="menu-item-img">
-                    <div class="menu-item-label"><h3 class="menu-item-title">Pizza</h3></div>
+                    <div class="menu-item-label"><h3 class="menu-item-title" data-translate-key="category_pizzas">Pizza</h3></div>
                 </a>
             </div>
         
@@ -99,7 +115,7 @@
             <div class="col-12">
                 <a href="#" class="menu-item-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#lomitoarabe-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/lomito_arabe_card.webp" alt="Categoría de Lomito Árabe" class="menu-item-img large-img">
-                    <div class="menu-item-label"><h3 class="menu-item-title">Lomito Árabe</h3></div>
+                    <div class="menu-item-label"><h3 class="menu-item-title" data-translate-key="category_lomito">Lomito Árabe</h3></div>
                 </a>
             </div>
         
@@ -107,7 +123,7 @@
             <div class="col-4">
                 <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#sandwiches-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/sandwich_card.webp" alt="Categoría de Sandwiches" class="menu-item-img">
-                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Sándwich</h4></div>
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small" data-translate-key="category_sandwiches">Sándwich</h4></div>
                 </a>
             </div>
 
@@ -115,7 +131,7 @@
             <div class="col-4">
                 <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#parapicar-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/para_picar_card.webp" alt="Categoría Para Picar" class="menu-item-img">
-                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Para Picar</h4></div>
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small" data-translate-key="category_appetizers">Para Picar</h4></div>
                 </a>
             </div>
 
@@ -123,7 +139,7 @@
             <div class="col-4">
                 <a href="#" class="menu-item-card square-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#bebidas-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/bebidas_card.webp" alt="Categoría de Bebidas" class="menu-item-img">
-                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small">Bebidas</h4></div>
+                    <div class="menu-item-label small-label"><h4 class="menu-item-title-small" data-translate-key="category_drinks">Bebidas</h4></div>
                 </a>
             </div>
 
@@ -132,7 +148,7 @@
                 <a href="#" class="menu-item-card text-decoration-none" data-bs-toggle="tab" data-bs-target="#cocteles-pane" role="tab">
                     <img src="assets/images/patio_terra/cards_img/cocteles_y_destilados_card.webp" alt="Categoría Cócteles" class="menu-item-img large-img">
                     <div class="menu-item-label">
-                        <h3 class="menu-item-title">Cócteles y Destilados</h3>
+                        <h3 class="menu-item-title" data-translate-key="category_cocktails">Cócteles y Destilados</h3>
                     </div>
                 </a>
             </div>
@@ -157,7 +173,7 @@
                         <div class="accordion" id="accordion-hamburguesas">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false" data-translate-key="extras_button">
                                         Agregados extras
                                     </button>
                                 </h2>
@@ -170,7 +186,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_egg">Huevo</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -185,7 +201,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_caramelized_onion">Cebolla caramelizada</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -200,7 +216,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_cheddar">Cheddar</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -215,7 +231,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_catupiry">Catupiry</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -230,7 +246,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_bacon">Panceta</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
                                                             </div>
                                                         </div>
@@ -245,7 +261,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_meat">Carne</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
                                                             </div>
                                                         </div>
@@ -260,7 +276,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_sauce">Salsa Extra</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
                                                             </div>
                                                         </div>
@@ -285,8 +301,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Simple</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso cheddar.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_burger_1">Hamburguesa Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_burger_1">Pan, carne, queso cheddar.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
                                     </div>
                                 </div>
@@ -304,8 +320,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Completa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso cheddar, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_burger_2">Hamburguesa Completa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_burger_2">Pan, carne, queso cheddar, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲28.000</p>
                                     </div>
                                 </div>
@@ -323,8 +339,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Hamburguesa Terra</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2"> Pan, carne, queso cheddar, cebolla caramelizada, panceta, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_burger_3">Hamburguesa Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_burger_3"> Pan, carne, queso cheddar, cebolla caramelizada, panceta, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲38.000</p>
                                     </div>
                                 </div>
@@ -351,14 +367,14 @@
                 <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
                 <div class="row justify-content-center mb-4">
                     <div class="col-12 col-lg-8">
-                        <div class="accordion" id="accordion-hamburguesas">
+                        <div class="accordion" id="accordion-pizzas">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-pizzas" aria-expanded="false" data-translate-key="extras_button">
                                         Agregados extras
                                     </button>
                                 </h2>
-                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                <div id="collapse-pizzas" class="accordion-collapse collapse" data-bs-parent="#accordion-pizzas">
                                     <div class="accordion-body">
                                         <div class="row g-3">
                                             <!-- Inicio: Agregado extra (1) -->
@@ -367,7 +383,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Queso catupiry</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_catupiry_cheese">Queso catupiry</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
                                                             </div>
                                                         </div>
@@ -382,7 +398,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Queso mozzarella</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_mozzarella_cheese">Queso mozzarella</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
                                                             </div>
                                                         </div>
@@ -397,7 +413,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Rodajas de calabresa</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_calabresa_slices">Rodajas de calabresa</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲9.000</p>
                                                             </div>
                                                         </div>
@@ -412,7 +428,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_bacon">Panceta</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
                                                             </div>
                                                         </div>
@@ -427,7 +443,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo duro</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_hard_boiled_egg">Huevo duro</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -442,7 +458,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa de ajo</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_garlic_sauce">Salsa de ajo</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
                                                             </div>
                                                         </div>
@@ -457,7 +473,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Aceituna</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_olive">Aceituna</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
                                                             </div>
                                                         </div>
@@ -482,8 +498,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">MARGARITA</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, tomate, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_1">MARGARITA</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_1">Mozzarella cremosa, tomate, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -501,8 +517,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Vegetariana</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, cebolla, morrones, tomate, choclo, palmito, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_2">Vegetariana</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_2">Mozzarella cremosa, cebolla, morrones, tomate, choclo, palmito, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲40.000</p>
                                     </div>
                                 </div>
@@ -520,8 +536,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Pollo con Catupiry</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, pollo desmenuzado, catupiry, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_3">Pollo con Catupiry</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_3">Mozzarella cremosa, pollo desmenuzado, catupiry, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -539,8 +555,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Palmito</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, palmito, catupiry, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_4">Palmito</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_4">Mozzarella cremosa, palmito, catupiry, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -558,8 +574,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">4 Quesos</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, queso provolone, parmesano, queso azul, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_5">4 Quesos</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_5">Mozzarella cremosa, queso provolone, parmesano, queso azul, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -577,8 +593,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Al Ajo</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, ajo, aceite de oliva, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_6">Al Ajo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_6">Mozzarella cremosa, ajo, aceite de oliva, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -596,8 +612,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Portuguesa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, jamón, huevo duro, cebolla, aceituna negra y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_7">Portuguesa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_7">Mozzarella cremosa, jamón, huevo duro, cebolla, aceituna negra y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -615,8 +631,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Choclo</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, choclo, aceituna y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_8">Choclo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_8">Mozzarella cremosa, choclo, aceituna y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -634,8 +650,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Napolitana</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, tomate, jamón, aceituna, albahaca y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_9">Napolitana</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_9">Mozzarella cremosa, tomate, jamón, aceituna, albahaca y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -653,8 +669,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Pepperoni</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, orégano y pepperoni.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_10">Pepperoni</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_10">Mozzarella cremosa, orégano y pepperoni.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲45.000</p>
                                     </div>
                                 </div>
@@ -672,8 +688,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Terra</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, panceta (bacon) y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_11">Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_11">Mozzarella cremosa, panceta (bacon) y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
                                     </div>
                                 </div>
@@ -691,8 +707,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Calabresa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella cremosa, calabresa, cebolla (opcional) y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_12">Calabresa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_12">Mozzarella cremosa, calabresa, cebolla (opcional) y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
                                     </div>
                                 </div>
@@ -710,8 +726,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Rúcula</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2"> Mozzarella cremosa, jamón crudo, rúcula, tomate cherry y orégano.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_13">Rúcula</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_13"> Mozzarella cremosa, jamón crudo, rúcula, tomate cherry y orégano.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
                                     </div>
                                 </div>
@@ -725,7 +741,7 @@
                 </div>
 
                 <!-- Bloque: SECCIÓN OPCIONAL DE PIZZAS DULCES -->
-                <div class="line">
+                <div class="line" data-translate-key="pizzas_dulces">
                     PIZZAS DULCES
                 </div>
             
@@ -736,8 +752,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sensación</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella, nutella, frutilla y azúcar impalpable.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_sweet_1">Sensación</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_sweet_1">Mozzarella, nutella, frutilla y azúcar impalpable.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲50.000</p>
                                     </div>
                                 </div>
@@ -755,8 +771,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">PRESTIGIO</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2"> Mozzarella, coco rallado, bañado en leche condensada, chocolate negro o blanco.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_sweet_2">PRESTIGIO</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_sweet_2"> Mozzarella, coco rallado, bañado en leche condensada, chocolate negro o blanco.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲50.000</p>
                                     </div>
                                 </div>
@@ -774,8 +790,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Bônoffee</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Mozzarella, banana, canela y dulce de leche.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_pizza_sweet_3">Bônoffee</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_pizza_sweet_3">Mozzarella, banana, canela y dulce de leche.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲55.000</p>
                                     </div>
                                 </div>
@@ -803,14 +819,14 @@
                 <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
                 <div class="row justify-content-center mb-4">
                     <div class="col-12 col-lg-8">
-                        <div class="accordion" id="accordion-hamburguesas">
+                        <div class="accordion" id="accordion-lomitoarabe">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-lomitoarabe" aria-expanded="false" data-translate-key="extras_button">
                                         Agregados extras
                                     </button>
                                 </h2>
-                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                <div id="collapse-lomitoarabe" class="accordion-collapse collapse" data-bs-parent="#accordion-lomitoarabe">
                                     <div class="accordion-body">
                                         <div class="row g-3">
                                             <!-- Inicio: Agregado extra (1) -->
@@ -819,7 +835,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_egg">Huevo</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -834,7 +850,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_caramelized_onion">Cebolla caramelizada</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -849,7 +865,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_cheddar">Cheddar</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -864,7 +880,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_catupiry">Catupiry</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -879,7 +895,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_bacon">Panceta</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
                                                             </div>
                                                         </div>
@@ -894,7 +910,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_meat">Carne</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
                                                             </div>
                                                         </div>
@@ -909,7 +925,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_sauce">Salsa Extra</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
                                                             </div>
                                                         </div>
@@ -934,8 +950,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Normal</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan árabe, carne o pollo, y repollo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_lomito_1">Normal</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_lomito_1">Pan árabe, carne o pollo, y repollo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
                                     </div>
                                 </div>
@@ -953,8 +969,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Completo</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan árabe, carne o pollo, repollo y queso catupiry.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_lomito_2">Completo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_lomito_2">Pan árabe, carne o pollo, repollo y queso catupiry.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲28.000</p>
                                     </div>
                                 </div>
@@ -967,7 +983,6 @@
                     <!-- Fin: Lomito (para replicar) -->
                 </div>
             </div>
-                <!-- Fin Bloque: SECCIÓN OPCIONAL DE ACOMPAÑAMIENTOS -->
         </div>
         <!-- ================================================================================ -->
         <!-- FIN: LOMITO ÁRABE                                                                -->
@@ -982,14 +997,14 @@
                 <!-- Bloque: SECCIÓN OPCIONAL DE AGREGADOS (ACORDEÓN) -->
                 <div class="row justify-content-center mb-4">
                     <div class="col-12 col-lg-8">
-                        <div class="accordion" id="accordion-hamburguesas">
+                        <div class="accordion" id="accordion-sandwiches">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hamburguesas" aria-expanded="false">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-sandwiches" aria-expanded="false" data-translate-key="extras_button">
                                         Agregados extras
                                     </button>
                                 </h2>
-                                <div id="collapse-hamburguesas" class="accordion-collapse collapse" data-bs-parent="#accordion-hamburguesas">
+                                <div id="collapse-sandwiches" class="accordion-collapse collapse" data-bs-parent="#accordion-sandwiches">
                                     <div class="accordion-body">
                                         <div class="row g-3">
                                             <!-- Inicio: Agregado extra (1) -->
@@ -998,7 +1013,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Huevo</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_egg">Huevo</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -1013,7 +1028,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cebolla caramelizada</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_caramelized_onion">Cebolla caramelizada</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -1028,7 +1043,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Cheddar</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_cheddar">Cheddar</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -1043,7 +1058,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Catupiry</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_catupiry">Catupiry</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲5.000</p>
                                                             </div>
                                                         </div>
@@ -1058,7 +1073,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Panceta</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_bacon">Panceta</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲6.000</p>
                                                             </div>
                                                         </div>
@@ -1073,7 +1088,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Carne</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_meat">Carne</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲8.000</p>
                                                             </div>
                                                         </div>
@@ -1088,7 +1103,7 @@
                                                     <div class="row g-0 align-items-center">
                                                         <div class="col">
                                                             <div class="card-body p-2">
-                                                                <h3 class="product-title-bs5 h5 mb-1">Salsa Extra</h3>
+                                                                <h3 class="product-title-bs5 h5 mb-1" data-translate-key="extra_sauce">Salsa Extra</h3>
                                                                 <p class="product-price-bs5 h4 fw-bolder mb-0">₲3.000</p>
                                                             </div>
                                                         </div>
@@ -1108,7 +1123,7 @@
                 <!-- Bloque: Listado de Productos Principales de la Categoría -->
                 <div class="row g-4">
                     <!-- Bloque: SECCIÓN OPCIONAL DE Sandwich de Lomito -->
-                    <div class="line">
+                    <div class="line" data-translate-key="sandwich_lomito">
                         SANDWICH DE LOMITO
                     </div>
                     <!-- Inicio: Sándwich (1) -->
@@ -1117,8 +1132,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Simple</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, lechuga y tomate.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_lomito_1">Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_lomito_1">Pan, carne, queso mozzarella, lechuga y tomate.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
                                     </div>
                                 </div>
@@ -1136,8 +1151,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Completa</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_lomito_2">Completa</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_lomito_2">Pan, carne, queso mozzarella, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
@@ -1155,8 +1170,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Terra</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, carne, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_lomito_3">Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_lomito_3">Pan, carne, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲42.000</p>
                                     </div>
                                 </div>
@@ -1170,7 +1185,7 @@
                 </div>
 
                 <!-- Bloque: SECCIÓN OPCIONAL DE Sandwich de Pollo -->
-                <div class="line">
+                <div class="line" data-translate-key="sandwich_pollo">
                     SANDWICH DE POLLO
                 </div>
 
@@ -1181,8 +1196,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Simple</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, lechuga y tomate.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_pollo_1">Sándwich Simple</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_pollo_1">Pan, pollo, queso mozzarella, lechuga y tomate.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲22.000</p>
                                     </div>
                                 </div>
@@ -1200,8 +1215,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Completo</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_pollo_2">Sándwich Completo</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_pollo_2">Pan, pollo, queso mozzarella, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
@@ -1219,8 +1234,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sándwich Terra</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Pan, pollo, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_sandwich_pollo_3">Sándwich Terra</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_sandwich_pollo_3">Pan, pollo, queso mozzarella, panceta, cebolla caramelizada, lechuga, tomate y huevo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲42.000</p>
                                     </div>
                                 </div>
@@ -1251,7 +1266,7 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Papas fritas</h3>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_appetizer_1">Papas fritas</h3>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲12.000</p>
                                     </div>
                                 </div>
@@ -1269,7 +1284,7 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Mandioca Frita</h3>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_appetizer_2">Mandioca Frita</h3>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
                                     </div>
                                 </div>
@@ -1287,8 +1302,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Frango a Passarinho</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Incluye 8 piezas de pollo con papas fritas o mandiocas fritas.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_appetizer_3">Frango a Passarinho</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_appetizer_3">Incluye 8 piezas de pollo con papas fritas o mandiocas fritas.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
@@ -1306,8 +1321,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Calabresa con Fritas</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Papas fritas crujientes, rodajas de calabresa y cebolla salteada.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_appetizer_4">Calabresa con Fritas</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_appetizer_4">Papas fritas crujientes, rodajas de calabresa y cebolla salteada.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲32.000</p>
                                     </div>
                                 </div>
@@ -1338,8 +1353,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Agua</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Con o sin gas.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_drink_1">Agua</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_1">Con o sin gas.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
                                     </div>
                                 </div>
@@ -1357,21 +1372,21 @@
                             <img src="assets/images/patio_terra/bebidas/jugos/jugos_naturales.webp" class="card-img-top" alt="bebidas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="item_drink_2">
                                     Jugos Naturales
                                 </h3>
-                                <p class="product-description-bs5 small text-muted mb-2">Durazno, Piña, Naranja, Limón.</p>
+                                <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_2">Durazno, Piña, Naranja, Limón.</p>
                                 <ul class="price-list-items">
                                     <li>
-                                        <span class="item-name">Jarra Grande</span>
+                                        <span class="item-name" data-translate-key="drink_size_large_pitcher">Jarra Grande</span>
                                         <span class="item-price">₲35.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Jarra Pequeña</span>
+                                        <span class="item-name" data-translate-key="drink_size_small_pitcher">Jarra Pequeña</span>
                                         <span class="item-price">₲25.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Vaso</span>
+                                        <span class="item-name" data-translate-key="drink_size_glass">Vaso</span>
                                         <span class="item-price">₲13.000</span>
                                     </li>
                                 </ul>
@@ -1386,10 +1401,10 @@
                             <img src="assets/images/patio_terra/bebidas/refrescos/antarctica.webp" class="card-img-top" alt="bebidas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="item_drink_3">
                                     Antarctica
                                 </h3>
-                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero</p>
+                                <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_3">Normal y Zero</p>
                                 <ul class="price-list-items">
                                     <li>
                                         <span class="item-name">500ml</span>
@@ -1411,10 +1426,10 @@
                             <img src="assets/images/patio_terra/bebidas/refrescos/coca_cola.webp" class="card-img-top" alt="bebidas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="item_drink_4">
                                     Coca Cola
                                 </h3>
-                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero</p>
+                                <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_4">Normal y Zero</p>
                                 <ul class="price-list-items">
                                     <li>
                                         <span class="item-name">500ml</span>
@@ -1436,10 +1451,10 @@
                             <img src="assets/images/patio_terra/bebidas/refrescos/fanta.webp" class="card-img-top" alt="bebidas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="item_drink_5">
                                     Fanta
                                 </h3>
-                                <p class="product-description-bs5 small text-muted mb-2">Naranja, Guaraná, Piña.</p>
+                                <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_5">Naranja, Guaraná, Piña.</p>
                                 <ul class="price-list-items">
                                     <li>
                                         <span class="item-name">500ml</span>
@@ -1461,10 +1476,10 @@
                             <img src="assets/images/patio_terra/bebidas/refrescos/sprite.webp" class="card-img-top" alt="bebidas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="item_drink_6">
                                     Sprite
                                 </h3>
-                                <p class="product-description-bs5 small text-muted mb-2">Normal y Zero.</p>
+                                <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_6">Normal y Zero.</p>
                                 <ul class="price-list-items">
                                     <li>
                                         <span class="item-name">500ml</span>
@@ -1486,8 +1501,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Schweppes</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Citrus y Tónica.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_drink_7">Schweppes</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_drink_7">Citrus y Tónica.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲10.000</p>
                                     </div>
                                 </div>
@@ -1517,8 +1532,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Aperol</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Aperol, prosecco, soda, hielo y una rodaja de naranja.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_1">Aperol</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_1">Aperol, prosecco, soda, hielo y una rodaja de naranja.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -1536,8 +1551,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Gin Tonic</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Ginebra, tónica, hielo y una rodaja de limón o pepino.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_2">Gin Tonic</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_2">Ginebra, tónica, hielo y una rodaja de limón o pepino.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -1555,8 +1570,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Caipiroska</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Vodka, lima, azúcar y hielo picado.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_3">Caipiroska</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_3">Vodka, lima, azúcar y hielo picado.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -1574,8 +1589,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Caipirinha</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Cachaça, lima, azúcar y hielo picado.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_4">Caipirinha</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_4">Cachaça, lima, azúcar y hielo picado.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲25.000</p>
                                     </div>
                                 </div>
@@ -1593,8 +1608,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Fernet Cola</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Fernet, refresco de cola y hielo.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_5">Fernet Cola</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_5">Fernet, refresco de cola y hielo.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -1612,8 +1627,8 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-7">
                                     <div class="card-body p-3">
-                                        <h3 class="product-title-bs5 h5 mb-1">Sangría</h3>
-                                        <p class="product-description-bs5 small text-muted mb-2">Vino tinto, refresco de naranja o limón, frutas picadas (como naranja, manzana, limón, durazno) y, opcionalmente, un toque de licor.</p>
+                                        <h3 class="product-title-bs5 h5 mb-1" data-translate-key="item_cocktail_6">Sangría</h3>
+                                        <p class="product-description-bs5 small text-muted mb-2" data-translate-key="desc_cocktail_6">Vino tinto, refresco de naranja o limón, frutas picadas (como naranja, manzana, limón, durazno) y, opcionalmente, un toque de licor.</p>
                                         <p class="product-price-bs5 h4 fw-bolder mb-0">₲35.000</p>
                                     </div>
                                 </div>
@@ -1631,53 +1646,53 @@
                             <img src="assets/images/patio_terra/cocteles/vinos.webp" class="card-img-top" alt="Copa de vino tinto">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="list_wines">
                                     VINOS
                                 </h3>
                             
                                 <ul class="price-list-items">
                                     <li>
-                                        <span class="item-name">Alma mora Norma</span>
+                                        <span class="item-name" data-translate-key="wine_1">Alma mora Norma</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Gran Hacienda</span>
+                                        <span class="item-name" data-translate-key="wine_2">Gran Hacienda</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Terra Noble Car Alma</span>
+                                        <span class="item-name" data-translate-key="wine_3">Terra Noble Car Alma</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Mora Black Norton</span>
+                                        <span class="item-name" data-translate-key="wine_4">Mora Black Norton</span>
                                         <span class="item-price">₲80.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Alma Mora Black</span>
+                                        <span class="item-name" data-translate-key="wine_5">Alma Mora Black</span>
                                         <span class="item-price">₲80.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Carmen Synal</span>
+                                        <span class="item-name" data-translate-key="wine_6">Carmen Synal</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Santa Julia Malbec</span>
+                                        <span class="item-name" data-translate-key="wine_7">Santa Julia Malbec</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Benjamín Malbec</span>
+                                        <span class="item-name" data-translate-key="wine_8">Benjamín Malbec</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Casa Sibra Malbec</span>
+                                        <span class="item-name" data-translate-key="wine_9">Casa Sibra Malbec</span>
                                         <span class="item-price">₲85.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Male Gascon Malbec</span>
+                                        <span class="item-name" data-translate-key="wine_10">Male Gascon Malbec</span>
                                         <span class="item-price">₲70.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Copa de vino</span>
+                                        <span class="item-name" data-translate-key="wine_11">Copa de vino</span>
                                         <span class="item-price">₲20.000</span>
                                     </li>
                                 </ul>
@@ -1692,28 +1707,28 @@
                             <img src="assets/images/patio_terra/cocteles/cervezas.webp" class="card-img-top" alt="Cervezas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="list_beers">
                                     Cervezas
                                 </h3>
                                 <ul class="price-list-items">
                                     <li>
-                                        <span class="item-name">Heineken (650 ml)</span>
+                                        <span class="item-name" data-translate-key="beer_1">Heineken (650 ml)</span>
                                         <span class="item-price">₲25.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Cerveza Miller</span>
+                                        <span class="item-name" data-translate-key="beer_2">Cerveza Miller</span>
                                         <span class="item-price">₲25.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Corona (650 ml)</span>
+                                        <span class="item-name" data-translate-key="beer_3">Corona (650 ml)</span>
                                         <span class="item-price">₲25.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Munich (650 ml)</span>
+                                        <span class="item-name" data-translate-key="beer_4">Munich (650 ml)</span>
                                         <span class="item-price">₲18.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Heineken 0 (300 ml)</span>
+                                        <span class="item-name" data-translate-key="beer_5">Heineken 0 (300 ml)</span>
                                         <span class="item-price">₲12.000</span>
                                     </li>
                                 </ul>
@@ -1728,20 +1743,20 @@
                             <img src="assets/images/patio_terra/cocteles/chops.webp" class="card-img-top" alt="Cervezas">
                             
                             <div class="card-body p-3">
-                                <h3 class="product-title-bs5 h5 mb-2">
+                                <h3 class="product-title-bs5 h5 mb-2" data-translate-key="list_drafts">
                                     Vasos
                                 </h3>
                                 <ul class="price-list-items">
                                     <li>
-                                        <span class="item-name">Chop Munich 500</span>
+                                        <span class="item-name" data-translate-key="draft_1">Chop Munich 500</span>
                                         <span class="item-price">₲25.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">Chop Munich 360</span>
+                                        <span class="item-name" data-translate-key="draft_2">Chop Munich 360</span>
                                         <span class="item-price">₲15.000</span>
                                     </li>
                                     <li>
-                                        <span class="item-name">2x1 Chop 360</span>
+                                        <span class="item-name" data-translate-key="draft_3">2x1 Chop 360</span>
                                         <span class="item-price">₲20.000</span>
                                     </li>
                                 </ul>
@@ -1762,9 +1777,9 @@
     ================================================================== -->
     <footer class="footer-section text-center">
         <div class="container">
-            <small class="d-block copyright-text">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
+            <small class="d-block copyright-text" data-translate-key="copyright">© 2025 Restaurante TERRA BRASIL. Todos los derechos reservados.</small>
             <small class="d-block credit-text">
-                Menú digital desarrollado por 
+                <span data-translate-key="developed_by">Menú digital desarrollado por</span> 
                 <a href="https://xmoss-service.com/" target="_blank" rel="noopener noreferrer" class="credit-link">XMOSS SERVICE</a>
             </small>
         </div>
@@ -1774,6 +1789,7 @@
         BLOQUE 8: SCRIPTS JAVASCRIPT (NO TOCAR)
     ================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/translations.js" defer></script>
     <script src="js/script.js" defer></script>
 
 </body>
